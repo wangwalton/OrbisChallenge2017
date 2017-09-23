@@ -23,7 +23,10 @@ class Direction(Enum):
         :param (int,int) point: (x,y) point
         :rtype: (int,int)
         """
-        return add_points(point, self.value)
+        p = add_points(point, self.value)
+        n = mod_point(p, (19, 19))
+
+        return n
 
 Direction._delta_to_direction = {
     dir.value: dir for dir in Direction

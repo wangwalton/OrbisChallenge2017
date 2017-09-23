@@ -1,1 +1,1 @@
-{"mapName":"Open Map","playerPaths":["Bots/JavaAI/PlayerAI.java",""],"maxResponseTime":1073741823,"turnLimit":10,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","IDE"]}
+{"mapName":"Quadrants","playerPaths":["Bots/JavaAI/PlayerAI.java",""],"maxResponseTime":1073741823,"turnLimit":76,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","IDE"]}
