@@ -1,0 +1,1330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PythonClientAPI.Game package &mdash; Orbis Challenge 2017 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom-styles.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Orbis Challenge 2017 1.0.0 documentation" href="../index.html"/>
+        <link rel="next" title="FAQ" href="../faq.html"/>
+        <link rel="prev" title="Python API Basics" href="../pythonapi.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Orbis Challenge 2017
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installing Java/Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ide.html">Configuring Your IDE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../game.html">Game Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../challenge.html">Scoring and Tournament</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_maps.html">Building custom maps</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../javaapi.html">Java API Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonapi.html">Python API Basics</a></li>
+<li class="toctree-l1"><a class="reference external" href="_static/javadoc/index.html#://">Java Docs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python docstrings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-PythonClientAPI.Game.Entities">PythonClientAPI.Game.Entities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-PythonClientAPI.Game.Enums">PythonClientAPI.Game.Enums module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-PythonClientAPI.Game.PointUtils">PythonClientAPI.Game.PointUtils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-PythonClientAPI.Game.World">PythonClientAPI.Game.World module</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Orbis Challenge 2017</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>PythonClientAPI.Game package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pydoc/PythonClientAPI.Game.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pythonclientapi-game-package">
+<h1>PythonClientAPI.Game package<a class="headerlink" href="#pythonclientapi-game-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-PythonClientAPI.Game.Entities">
+<span id="pythonclientapi-game-entities-module"></span><h2>PythonClientAPI.Game.Entities module<a class="headerlink" href="#module-PythonClientAPI.Game.Entities" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="PythonClientAPI.Game.Entities.Tile">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Entities.</code><code class="descname">Tile</code><span class="sig-paren">(</span><em>position</em>, <em>team</em>, <em>permanent</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#Tile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.Tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a colour-changing tile on the board.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>position</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – tile’s position</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.Tile.is_enemy">
+<code class="descname">is_enemy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#Tile.is_enemy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.Tile.is_enemy" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff Tile is owned by the enemy team</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.Tile.is_friendly">
+<code class="descname">is_friendly</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#Tile.is_friendly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.Tile.is_friendly" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff Tile is owned by your team</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.Tile.is_neutral">
+<code class="descname">is_neutral</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#Tile.is_neutral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.Tile.is_neutral" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff Tile is not yet owned by any team</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.Tile.is_permanently_owned">
+<code class="descname">is_permanently_owned</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#Tile.is_permanently_owned"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.Tile.is_permanently_owned" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff Tile is permanently owned</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PythonClientAPI.Game.Entities.FriendlyUnit">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Entities.</code><code class="descname">FriendlyUnit</code><span class="sig-paren">(</span><em>team</em>, <em>uuid</em>, <em>health</em>, <em>position</em>, <em>last_move_result</em>, <em>merged_units_uuid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#FriendlyUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.FriendlyUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a friendly unit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>uuid</strong> (<em>str</em>) – unique uuid for this unit</li>
+<li><strong>health</strong> (<em>int</em>) – health point</li>
+<li><strong>position</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – unit position</li>
+<li><strong>last_move_result</strong> (<a class="reference internal" href="#PythonClientAPI.Game.Enums.MoveResult" title="PythonClientAPI.Game.Enums.MoveResult"><em>MoveResult</em></a>) – last move result</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.FriendlyUnit.get_next_move_target">
+<code class="descname">get_next_move_target</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#FriendlyUnit.get_next_move_target"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.FriendlyUnit.get_next_move_target" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">next move target assigned for this turn</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.FriendlyUnit.get_next_move_type">
+<code class="descname">get_next_move_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#FriendlyUnit.get_next_move_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.FriendlyUnit.get_next_move_type" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">next move type assigned for this turn</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#PythonClientAPI.Game.Enums.MoveType" title="PythonClientAPI.Game.Enums.MoveType">MoveType</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Entities.FriendlyUnit.is_merged_with_unit">
+<code class="descname">is_merged_with_unit</code><span class="sig-paren">(</span><em>uuid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#FriendlyUnit.is_merged_with_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.FriendlyUnit.is_merged_with_unit" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uuid</strong> (<em>str</em>) – uuid of merged unit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if a unit with uuid was merged into this FriendlyUnit</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PythonClientAPI.Game.Entities.EnemyUnit">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Entities.</code><code class="descname">EnemyUnit</code><span class="sig-paren">(</span><em>team</em>, <em>uuid</em>, <em>health</em>, <em>position</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Entities.html#EnemyUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Entities.EnemyUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an enemy unit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first last simple">
+<li><strong>uuid</strong> (<em>str</em>) – unique uuid for this unit</li>
+<li><strong>health</strong> (<em>int</em>) – health point</li>
+<li><strong>position</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – unit position</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-PythonClientAPI.Game.Enums">
+<span id="pythonclientapi-game-enums-module"></span><h2>PythonClientAPI.Game.Enums module<a class="headerlink" href="#module-PythonClientAPI.Game.Enums" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="PythonClientAPI.Game.Enums.Direction">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Enums.</code><code class="descname">Direction</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/Enums.html#Direction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Represents cardinal directions that units can move in.
+Their value is a coordinate offset represented by a single move of 1 tile in that direction.</p>
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.DIRECTION_TO_INDEX">
+<code class="descname">DIRECTION_TO_INDEX</code><em class="property"> = {&lt;Direction.NOWHERE: (0, 0)&gt;: 0, &lt;Direction.NORTH: (0, -1)&gt;: 1, &lt;Direction.EAST: (1, 0)&gt;: 2, &lt;Direction.SOUTH: (0, 1)&gt;: 3, &lt;Direction.WEST: (-1, 0)&gt;: 4}</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.DIRECTION_TO_INDEX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.EAST">
+<code class="descname">EAST</code><em class="property"> = (1, 0)</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.INDEX_TO_DIRECTION">
+<code class="descname">INDEX_TO_DIRECTION</code><em class="property"> = {0: &lt;Direction.NOWHERE: (0, 0)&gt;, 1: &lt;Direction.NORTH: (0, -1)&gt;, 2: &lt;Direction.EAST: (1, 0)&gt;, 3: &lt;Direction.SOUTH: (0, 1)&gt;, 4: &lt;Direction.WEST: (-1, 0)&gt;}</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.INDEX_TO_DIRECTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.NORTH">
+<code class="descname">NORTH</code><em class="property"> = (0, -1)</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.NORTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.NOWHERE">
+<code class="descname">NOWHERE</code><em class="property"> = (0, 0)</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.NOWHERE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.ORDERED_DIRECTIONS">
+<code class="descname">ORDERED_DIRECTIONS</code><em class="property"> = [&lt;Direction.NORTH: (0, -1)&gt;, &lt;Direction.EAST: (1, 0)&gt;, &lt;Direction.SOUTH: (0, 1)&gt;, &lt;Direction.WEST: (-1, 0)&gt;]</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.ORDERED_DIRECTIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.SOUTH">
+<code class="descname">SOUTH</code><em class="property"> = (0, 1)</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.SOUTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.Direction.WEST">
+<code class="descname">WEST</code><em class="property"> = (-1, 0)</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.Enums.Direction.move_point">
+<code class="descname">move_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/Enums.html#Direction.move_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Enums.Direction.move_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new point who’s values are that of the given point moved 1 tile in this direction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – (x,y) point</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">(int,int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PythonClientAPI.Game.Enums.TileType">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Enums.</code><code class="descname">TileType</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/Enums.html#TileType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Enums.TileType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.TileType.TILE">
+<code class="descname">TILE</code><em class="property"> = 1</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.TileType.TILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.TileType.WALL">
+<code class="descname">WALL</code><em class="property"> = 0</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.TileType.WALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PythonClientAPI.Game.Enums.MoveType">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Enums.</code><code class="descname">MoveType</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/Enums.html#MoveType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveType.MOVE">
+<code class="descname">MOVE</code><em class="property"> = 0</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveType.MOVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveType.REST">
+<code class="descname">REST</code><em class="property"> = 1</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveType.REST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PythonClientAPI.Game.Enums.MoveResult">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.Enums.</code><code class="descname">MoveResult</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/Enums.html#MoveResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.BLOCKED_BY_NEST">
+<code class="descname">BLOCKED_BY_NEST</code><em class="property"> = 3</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.BLOCKED_BY_NEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.BLOCKED_BY_WALL">
+<code class="descname">BLOCKED_BY_WALL</code><em class="property"> = 2</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.BLOCKED_BY_WALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.DAMAGE_SUCCESS">
+<code class="descname">DAMAGE_SUCCESS</code><em class="property"> = 1</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.DAMAGE_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.MOVE_INVALID">
+<code class="descname">MOVE_INVALID</code><em class="property"> = 5</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.MOVE_INVALID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.MOVE_SUCCESS">
+<code class="descname">MOVE_SUCCESS</code><em class="property"> = 0</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.MOVE_SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.NEWLY_MERGED">
+<code class="descname">NEWLY_MERGED</code><em class="property"> = 6</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.NEWLY_MERGED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.Enums.MoveResult.NEWLY_SPAWNED">
+<code class="descname">NEWLY_SPAWNED</code><em class="property"> = 4</em><a class="headerlink" href="#PythonClientAPI.Game.Enums.MoveResult.NEWLY_SPAWNED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-PythonClientAPI.Game.PointUtils">
+<span id="pythonclientapi-game-pointutils-module"></span><h2>PythonClientAPI.Game.PointUtils module<a class="headerlink" href="#module-PythonClientAPI.Game.PointUtils" title="Permalink to this headline">¶</a></h2>
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.PointUtils.add_points">
+<code class="descclassname">PythonClientAPI.Game.PointUtils.</code><code class="descname">add_points</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/PointUtils.html#add_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.PointUtils.add_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds two points together</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p1</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – First point</li>
+<li><strong>p2</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Second point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(p1.x + p2.x, p1.y + p2.y)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(int,int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.PointUtils.sub_points">
+<code class="descclassname">PythonClientAPI.Game.PointUtils.</code><code class="descname">sub_points</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/PointUtils.html#sub_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.PointUtils.sub_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtracts p2 from p1</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>p1</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – First point</li>
+<li><strong>p2</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – Second point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(p1.x - p2.x, p1.y - p2.y)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(int,int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PythonClientAPI.Game.PointUtils.mod_point">
+<code class="descclassname">PythonClientAPI.Game.PointUtils.</code><code class="descname">mod_point</code><a class="reference internal" href="../_modules/PythonClientAPI/Game/PointUtils.html#mod_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.PointUtils.mod_point" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – (x,y) point</li>
+<li><strong>mod_tuple</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – modulo tuple</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(point[0] % mod_tuple[0], point[1] % mod_tuple[1])</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(int,int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-PythonClientAPI.Game.World">
+<span id="pythonclientapi-game-world-module"></span><h2>PythonClientAPI.Game.World module<a class="headerlink" href="#module-PythonClientAPI.Game.World" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="PythonClientAPI.Game.World.World">
+<em class="property">class </em><code class="descclassname">PythonClientAPI.Game.World.</code><code class="descname">World</code><span class="sig-paren">(</span><em>tiles</em>, <em>friendlies</em>, <em>enemies</em>, <em>team_to_tiles_map</em>, <em>team_to_nests_map</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="PythonClientAPI.Game.World.World.at_edge">
+<code class="descname">at_edge</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.at_edge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.at_edge" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">true iff point lies on an edge of the map</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_capturable_tile_from">
+<code class="descname">get_closest_capturable_tile_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_capturable_tile_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_capturable_tile_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest non-permanent enemy or neutral Tile from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_enemy_from">
+<code class="descname">get_closest_enemy_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_enemy_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_enemy_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the closest EnemyUnit from point, excluding any of the ones in excluding_units.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</li>
+<li><strong>excluding_units</strong> (<em>set</em>) – a set of EnemyUnits to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">closest EnemyUnit from point</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.EnemyUnit" title="PythonClientAPI.Game.Entities.EnemyUnit">EnemyUnit</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_enemy_nest_from">
+<code class="descname">get_closest_enemy_nest_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_enemy_nest_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_enemy_nest_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest enemy nest location from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_enemy_tile_from">
+<code class="descname">get_closest_enemy_tile_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_enemy_tile_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_enemy_tile_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest enemy Tile from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_friendly_from">
+<code class="descname">get_closest_friendly_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_units</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_friendly_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_friendly_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the closest FriendlyUnit from point, excluding any of the ones in excluding_units.
+:param (int,int) point: point tuple
+:param set excluding_units: a set of FriendlyUnit to exclude from search
+:return: closest FriendlyUnit from point
+:rtype: FriendlyUnit</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_friendly_nest_from">
+<code class="descname">get_closest_friendly_nest_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_friendly_nest_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_friendly_nest_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest friendly nest location from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_friendly_tile_from">
+<code class="descname">get_closest_friendly_tile_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_friendly_tile_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_friendly_tile_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest friendly Tile from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_neutral_tile_from">
+<code class="descname">get_closest_neutral_tile_from</code><span class="sig-paren">(</span><em>point</em>, <em>excluding_points</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_neutral_tile_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_neutral_tile_from" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>excluding_points</strong> (<em>set</em>) – points to exclude from search</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Closest neutral Tile from point, excluding any of the ones whose positions are in excluding_points</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_closest_point_from">
+<code class="descname">get_closest_point_from</code><span class="sig-paren">(</span><em>source</em>, <em>condition</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_closest_point_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_closest_point_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given source, looks for the closest point from source that satisfies condition
+:param (int,int) source: source
+:param function condition: a function that takes a single point as an argument and evaluates to True if it matches the search criteria
+:return: the closest point from source for which condition evaluates to True
+:rtype: (int,int)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_enemy_nest_clusters">
+<code class="descname">get_enemy_nest_clusters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_enemy_nest_clusters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_enemy_nest_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of sets of (x,y) tuples, where each set represents an enemy nest cluster</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of set of (int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_enemy_nest_positions">
+<code class="descname">get_enemy_nest_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_enemy_nest_positions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_enemy_nest_positions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of (x,y) tuples for all enemy nests in current game state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of (int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_enemy_tiles">
+<code class="descname">get_enemy_tiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_enemy_tiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_enemy_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of all enemy Tiles</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_enemy_tiles_around">
+<code class="descname">get_enemy_tiles_around</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_enemy_tiles_around"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_enemy_tiles_around" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a list of enemy Tiles around point</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_friendly_nest_clusters">
+<code class="descname">get_friendly_nest_clusters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_friendly_nest_clusters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_friendly_nest_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of sets of (x,y) tuples, where each set represents a friendly nest cluster</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of set of (int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_friendly_nest_positions">
+<code class="descname">get_friendly_nest_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_friendly_nest_positions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_friendly_nest_positions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of (x,y) tuples for all friendly nests in current game state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of (int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_friendly_tiles">
+<code class="descname">get_friendly_tiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_friendly_tiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_friendly_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of all friendly Tiles</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_friendly_tiles_around">
+<code class="descname">get_friendly_tiles_around</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_friendly_tiles_around"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_friendly_tiles_around" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a list of friendly Tiles around point</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_height">
+<code class="descname">get_height</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_height"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_height" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">map height</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_neighbours">
+<code class="descname">get_neighbours</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_neighbours"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_neighbours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns neighbouring points in four cardinal directions from point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dictionary in which keys are of type Direction and values are (x,y) tuples</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_nest_positions">
+<code class="descname">get_nest_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_nest_positions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_nest_positions" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of (x,y) tuples for all nests in current game state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of (int, int)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_neutral_tiles">
+<code class="descname">get_neutral_tiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_neutral_tiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_neutral_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of all neutral Tiles</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_next_point_in_shortest_path">
+<code class="descname">get_next_point_in_shortest_path</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_next_point_in_shortest_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_next_point_in_shortest_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the next point in the shortest path between start and end, using a cache.
+If there is no path, returns start.</p>
+<p>Note: This method does not take into account dynamic game elements (i.e. other units or nests)
+that may stand in the way between the source and destination. It only takes into account walls and tiles.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>end</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – target</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">next point in the shortest path, or start if there is no path</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(int, int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_position_to_enemy_dict">
+<code class="descname">get_position_to_enemy_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_position_to_enemy_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_position_to_enemy_dict" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary whose keys are (x,y) tuples and values are EnemyUnits with positions at key</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict with key (int, int) and value EnemyUnit</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_position_to_friendly_dict">
+<code class="descname">get_position_to_friendly_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_position_to_friendly_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_position_to_friendly_dict" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary whose keys are (x,y) tuples and values are FriendlyUnits with positions at key</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict with key (int, int) and value FriendlyUnit</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_position_to_tile_dict">
+<code class="descname">get_position_to_tile_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_position_to_tile_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_position_to_tile_dict" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary whose keys are (x,y) tuples and values of Tiles with positions at key</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict with key (int, int) and value Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_shortest_path">
+<code class="descname">get_shortest_path</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>avoid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_shortest_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_shortest_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the shortest path between start and end.
+If avoid is not None, the method will return the shortest path
+between start and end that does not visit any points in avoid.</p>
+<p>If there is no path, None is returned.</p>
+<p>Note: The path-finding algorithm may come at a cost of performance.
+For a quicker path look-up alternative, use get_next_point_shortest_path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>end</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – target</li>
+<li><strong>avoid</strong> (<em>set</em>) – a set of (x,y) tuples to exclude from path-finding</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">list of points representing the shortest path such that the first element in the list is the next point in the path, or None.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list of point</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_shortest_path_distance">
+<code class="descname">get_shortest_path_distance</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_shortest_path_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_shortest_path_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the distance of the shortest path between start and end, only taking into account walls.
+If there is no path, returns 0.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> – </li>
+<li><strong>end</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_taxicab_distance">
+<code class="descname">get_taxicab_distance</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_taxicab_distance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_taxicab_distance" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>start</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – source</li>
+<li><strong>end</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – target</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">shortest taxi-cab distance between start and end</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_tile_at">
+<code class="descname">get_tile_at</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_tile_at"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_tile_at" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> – (x,y) tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Tile at point, or None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#PythonClientAPI.Game.Entities.Tile" title="PythonClientAPI.Game.Entities.Tile">Tile</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_tiles">
+<code class="descname">get_tiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_tiles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_tiles" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of all Tiles</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list of Tile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_tiles_around">
+<code class="descname">get_tiles_around</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_tiles_around"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_tiles_around" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns only Tile neighbours around point. If there are walls around point,
+they will not be included in the returned dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dictionary in which keys are of type Direction and values are Tiles</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_unit">
+<code class="descname">get_unit</code><span class="sig-paren">(</span><em>uuid</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_unit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given its uuid, returns the corresponding unit.
+If there are no living units with uuid, returns None.</p>
+<p>If you want to keep track of your units across turns,
+save their uuids somewhere in your PlayerAI instance
+and use this method to retrieve them at each turn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uuid</strong> (<em>str</em>) – unique uuid of desired unit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">FriendlyUnit with uuid</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#PythonClientAPI.Game.Entities.FriendlyUnit" title="PythonClientAPI.Game.Entities.FriendlyUnit">FriendlyUnit</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.get_width">
+<code class="descname">get_width</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.get_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.get_width" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">map width</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.is_wall">
+<code class="descname">is_wall</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.is_wall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.is_wall" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">true iff there is a wall tile at point</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.is_within_bounds">
+<code class="descname">is_within_bounds</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.is_within_bounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.is_within_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – point tuple</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">true iff point lies within boundaries of the map</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PythonClientAPI.Game.World.World.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>unit</em>, <em>position</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/PythonClientAPI/Game/World.html#World.move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#PythonClientAPI.Game.World.World.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a unit one step closer to position. Use this method to assign moves for your units.</p>
+<p>Note: this method uses get_next_point_in_shortest_path, which does not take into account
+dynamic game elements (i.e. other units or nests) that may stand in the way between
+the source and destination. It only takes into account walls and tiles.</p>
+<p>To include a list of “avoid” points in path-finding, use get_shortest_path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>unit</strong> (<a class="reference internal" href="#PythonClientAPI.Game.Entities.FriendlyUnit" title="PythonClientAPI.Game.Entities.FriendlyUnit"><em>FriendlyUnit</em></a>) – unit to move</li>
+<li><strong>position</strong> (<em>(</em><em>int</em><em>,</em><em>int</em><em>)</em>) – target position</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">whether or not the move will result in MOVE or REST</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#PythonClientAPI.Game.Enums.MoveType" title="PythonClientAPI.Game.Enums.MoveType">MoveType</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../pythonapi.html" class="btn btn-neutral" title="Python API Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Orbis Access.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/video.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

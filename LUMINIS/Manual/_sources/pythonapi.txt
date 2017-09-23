@@ -1,0 +1,136 @@
+Python API Basics
+=================
+
+This page only contains the basics of the Python API. For the full API, see the :doc:`Python docs <pydoc/PythonClientAPI.Game>`.
+
+
+.. admonition:: TL;DR
+   :class: tldr
+
+	Your task is to implement the playerAi.do_move(world, friendlies, enemies) function in the PlayerAI.java file. The do_move function is invoked at each turn in the game. The PlayerAI class is instantialized just once at the beginning of the game, and that instance is used for the rest of the game. 
+
+	We've provided some cool API that you can use in your do_move function. For example, use **world.move(unit, target)** to move a unit one point closer to any point on the map. You can see the actual result of your **previous** move with **friendly_unit.last_move_result**. Don't store a FriendlyUnit object in your PlayerAI instance, because it'll soon have outdated fields. You can keep track of a unit across turns by saving its unique UUID somewhere in your PlayerAI instance and retrieving the actual unit with **world.get_unit(uuid)**. 
+
+	There are other API for you to experiment with, such as **world.get_shortest_path**, **world.get_closest_capturable_tile_from**, **world.get_enemy_nest_clusters**. Have fun!
+
+.. WARNING::
+  Don't change the function definition for do_move. This function is called by the client code (which you also shouldn't modify) because when you submit your file only your PlayerAI file and any additional libraries are kept and any client code is removed. Thus, if you change the method, your code will cause an Exception and ultimately invalidate all of your work.
+
+The basics
+----------
+
+.. code-block:: python
+
+	# A FriendlyUnit represents a unit in your team
+	# The friendlies argument in the do_move function contains all your living firefly units in order of health points
+	# So you can get the strongest unit in your team like this
+	unit = friendlies[-1]
+
+	# All units have a unique UUID that you can track them by
+	uuid = friendly_unit.uuid
+	print(friendly_unit_a == friendly_unit_b) # returns True if and only if friendly_unit_a and friendly_unit_b have the same UUID
+	# If you've saved a unit's UUID in your PlayerAI instance, you can locate it using the World.get_unit(uuid)
+	# For example, say that you have a list of uuids in self.saved_uuids, where self is the PlayerAI instance
+	for uuid in self.saved_uuids:
+		unit = world.get_unit(uuid)
+		if unit: # Make sure that the saved unit is still alive!
+			... do something with unit ...
+	
+	# You can check a unit's position
+	position = unit.position
+	# ... its health
+	health = unit.health
+	# ... and its last move result
+	whatHappenedLastTime = unit.last_move_result
+
+	# Here are MoveResult types that you should know:
+	# MoveResult.MOVE_INVALID: You tried to move into a point that is not within the bounds of the map or not within 1 tile distance of your unit
+	# MoveResult.MOVE_SUCCESS: Your unit successfully moved into its target (or rested intentionally)
+	# MoveResult.DAMAGE_SUCCESS: Your unit successfully damaged an enemy unit but didn't move into its tile
+	# MoveResult.BLOCKED_BY_WALL: Your unit tried to enter into a wall
+	# MoveResult.BLOCKED_BY_NEST: Your unit tried to enter into a nest
+	# MoveResult.NEWLY_SPAWNED: Your unit is newly spawned
+	# MoveResult.NEWLY_MERGED: Your unit is a newly merged unit
+
+	# If your units merge, the merged units will disappear, and a new unit with their combined health points will appear. If you're keeping track of your units across turns, it might be useful to check if a unit has merged with another:
+	unit.is_merged_with_unit(some_other_unit_uuid) // returns True if a unit with UUID some_other_unit_uuid merged into this unit
+
+	# You can also check an EnemyUnit's health and position
+	# The enemies argument in your do_move function contains all living enemy units in order of health points
+	weakestEnemy = enemies[0]
+	health = weakestEnemy.health
+	position = weakestEnemy.position
+
+	# You can move friendly units using the world.move(unit, position) method.
+	# For instance, this moves some_friendly_unit one step closer to (10, 10)
+	world.move(some_friendly_unit, (10, 10))
+	# Side note: a tuple is used to represent an (x, y) coordinate on the board. The top-left corner is (0, 0). X-coordinates increase rightwards per tile. Y-coordinates increase downwards per tile.
+
+	# world.move(unit, position) doesn't take into account other units or nests when deciding the shortest path
+	# from the unit's position to the target. It simply looks up walls and tiles from a cache.
+	# You can use world.get_shortest_path(start, end, avoid) to include "avoid" points in your path-finding.
+	enemy_positions = set()
+	for unit in enemies:
+		enemy_positions.add(unit.position)
+	# This finds the shortest path between some_friendly_unit's position and (10, 10) that doesn't include enemy unit positions
+	path = world.get_shortest_path(some_friendly_unit.position, (10, 10), enemy_positions)
+	if path: world.move(some_friendly_unit, path[0])
+
+Path-finding
+------------
+
+.. code-block:: python
+	
+	# The API provides some path-finding methods that you can use
+
+	# ... for finding units
+	bad_unit = world.get_closest_enemy_from(friendly_unit.position, None) # returns the closest EnemyUnit from friendly_unit's position, or None if there is none
+	avoid = set()
+	avoid.add(friendly_unit)
+	nice_unit = world.get_closest_friendly_from(friendly_unit.position, avoid) # returns the closest FriendlyUnit from friendly_unit, except friendly_unit
+
+	# ... for finding tiles
+	# A Tile represents a colour-changing tile. You can check its owner with tile.is_friendly(), tile.is_enemy() and tile.is_neutral() and its state with tile.is_permanently_owned()
+	tile = world.get_closest_capturable_tile_from(friendly_unit.position, None) # returns closest non-permanent enemy or neutral Tile from friendly_unit's position, or None if there is none
+	all_permanent_enemy_tile_positions = set([tile.position for tile in world.get_enemy_tiles() if tile.is_permanently_owned()])
+	tile = world.get_closest_capturable_tile_from(friendly_unit.position, all_permanent_enemy_tile_positions) # returns closest non-permanent enemy or neutral Tile from friendly_unit's position excluding ones whose positions are in all_permanent_enemy_tile_positions, or None if there is none
+
+	# ... for finding nests
+	enemy_nest = world.get_closest_enemy_nest_from(friendly_unit.position, None)
+
+	# ... for calculating shortest path
+	path = world.get_shortest_path(friendly_unit.position, bad_unit.position, all_nest_and_wall_positions) # returns shortest path between friendly_unit's position and bad_unit's position that doesn't include any points in all_nest_and_wall_positions, or None if there is None
+
+	# Warning: world.get_shortest_path may come at a cost of performance, especially for Python users. To account for performance, you might try something like
+	target = (10, 10)
+	if friendly_unit.last_move_result in [MoveResult.BLOCKED_BY_NEST, MoveResult.BLOCKED_BY_WALL]:
+		# use world.get_shortest_path only if you've actually hit a wall or a nest
+		path = world.get_shortest_path(friendly_unit.position, target, some_avoid_points)
+		if path: target = path[0]
+	world.move(friendly_unit, target)
+
+	# There is also a more general path-finding function that takes in a custom predicate as an argument
+	# For example, this finds the closest EnemyUnit by FriendlyUnit unit whose health is lower than unit
+	weak_enemy_positions = set([enemy.position for enemy in enemies if enemy.health < unit.health]) # where enemies is the list of EnemyUnits given in the do_move function
+	closest_weak_enemy_position = world.get_closest_point_from(unit.position, lambda point: point in weak_enemy_positions)
+
+
+Nest tactics
+------------
+
+.. code-block:: python
+	
+	# Find neutral tiles
+	neutral_tiles = world.get_neutral_tiles()
+	# Find just tiles around a point
+	tiles_around = world.get_tiles_around((10, 10))
+
+	# Note: Direction indicates the compass directions and has five types: Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST and Direction.NOWHERE
+
+	# Find enemy nest positions
+	enemy_nest_positions = world.get_enemy_nest_positions()
+	# Find enemy nest clusters
+	enemy_nest_clusters = world.get_enemy_nest_clusters() # each set in the list is an enemy nest cluster
+
+
+Feel free to explore the rest of the API in the docstrings!

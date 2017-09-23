@@ -1,0 +1,42 @@
+Quick Start Guide
+=================
+
+.. admonition:: TL;DR
+   :class: tldr
+   
+   Install JDK (1.8 or newer) and the challenge starter pack. Run the Launcher.
+
+First, make sure you have Java 1.8+ (and optionally Python 3.5+ if you plan on making a Python AI) 
+installed and added to your PATH. Check out our handy page on getting all that sorted :doc:`here <installing>`.
+
+Setting up the starter packs
+----------------------------
+
+1. In your competitor dashboard from the Orbis Challenge website, download the starter pack of your choice from Dropbox by clicking on the "Download starter kit" button.
+2. Unzip the starter pack in any working directory.
+3. Ensure that you have full permissions for all the content in the starter pack folder.
+
+	* In a Linux environment, you can do this by executing the shell command::
+
+		sudo chmod -R 755 "PATH_TO_STARTER_PACK_FOLDER"
+
+	* In Windows, you can confirm that you have full control by right-clicking on the starter pack folder and navigating to Properties -> Security.
+
+
+
+Running the game with a sample AI
+---------------------------------
+
+Just so you can see the game in action right away, the starter packs include a very simple sample AI for you to run the game with. Here are the steps for you to follow:
+
+1. Go into the "LUMINIS" folder in your starter pack.
+2. Run Launcher.sh (Linux) or Launcher.bat (Windows) on the console to start the launcher.
+3. The launcher should default to the sample AI configurations. Click the Start button to run the game.
+
+.. HINT::
+  For more information about any setting in the launcher, just hover your mouse over it to pop up the tool-tip.
+
+Once you are able to run the game with the default AI player, you can try running the game with your own AI.
+The sample AI is located inside the LUMINIS/Bots folder of the starter pack. You can keep your AI in any subdirectory of the Bots folder.
+
+If you run into any problems, email challenge@orbis.com with any questions that you may have.

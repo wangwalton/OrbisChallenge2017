@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Game Introduction &mdash; Orbis Challenge 2017 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom-styles.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Orbis Challenge 2017 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Scoring and the Tournament" href="challenge.html"/>
+        <link rel="prev" title="Configuring your IDE" href="ide.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Orbis Challenge 2017
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing Java/Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ide.html">Configuring Your IDE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Game Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-video">Demo video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definitions">Definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#firefly-unit-red-unit-blue">Firefly  </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tile-tile-red-tile-blue-tile-neutral">Tile   </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nest-nest-red-nest-blue">Nest  </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#permanent-territory-tile-redp-tile-bluep">Permanent territory  </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wall-wall">Wall </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map">Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turn-limit">Turn Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turn-timeout">Turn Timeout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main-objective">Main objective</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#turns">Turns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-world">The World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-your-fireflies">Moving your fireflies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-and-destroying-nests">Building and destroying nests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Scoring and Tournament</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_maps.html">Building custom maps</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API Basics</a></li>
+<li class="toctree-l1"><a class="reference external" href="_static/javadoc/index.html#://">Java Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonClientAPI.Game.html">Python docstrings</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orbis Challenge 2017</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Game Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/game.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="game-introduction">
+<h1>Game Introduction<a class="headerlink" href="#game-introduction" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/gameplay_shot.png"><img alt="_images/gameplay_shot.png" src="_images/gameplay_shot.png" style="width: 320px;" /></a>
+</div>
+<div class="tldr admonition">
+<p class="first admonition-title">TL;DR</p>
+<ul class="last">
+<li><p class="first">The objective of the game is to expand territory on a tile board.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Each tile on the board represents territory.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">You control a team of fireflies on the board.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Move a firefly into a tile to illuminate it.</li>
+<li>You can move as many fireflies as you want per turn, but each firsefly can move only a maximum of 1 tile distance per turn.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Fireflies can move into empty tiles, merge into other friendly fireflies or attack enemies. It can’t move into walls.</p>
+</li>
+<li><p class="first">Build a nest by illuminating adjacent tiles of a neutral tile.</p>
+</li>
+<li><p class="first">Destroy an enemy nest by infiltrating one of its adjacent tiles.</p>
+<blockquote>
+<div><ul class="simple">
+<li>A destroyed enemy nest and its adjacent tiles become your permanent territory</li>
+<li>Unlike normal territory, permanent territory never changes owners once you capture it.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Luminis is a two-player territory expansion strategy game where you command a team of fireflies to compete for territory against your opponent on a tile-based board. You and your opponent each begin with a single nest from which new fireflies are spawned at each turn. Every square on the board, except for walls, is a luminescent tile that illuminates the colour of its most recent visitor.</p>
+<p>You can build a nest by colouring the adjacent tiles of a neutral tile (i.e. a tile that has never been visited yet). You need to protect a nest’s adjacent tiles to keep it alive. If your opponent acquires even just one of its adjacent tiles, your nest is destroyed, and it and its adjacent tiles become your opponent’s permanent territory. Unlike normal tiles, permanent territory will not change owners regardless of its most recent visitor, so you can never reclaim it.</p>
+<p>If you have a group of nests with overlapping adjacent tiles, this is called a cluster. If just one nest in the cluster is destroyed, the entire cluster is also destroyed and becomes your opponent’s permanent territory.</p>
+<p>The game ends if you eliminate all your opponent’s nests, or if your opponent eliminates all your nests (or at timeout). You earn 1 point per tile you own at the end of the game - plus another point per permanent tile. You win if your score is higher than that of your opponent.</p>
+</div>
+<div class="section" id="demo-video">
+<h2>Demo video<a class="headerlink" href="#demo-video" title="Permalink to this headline">¶</a></h2>
+<video class="large" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/gameplay.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="firefly-unit-red-unit-blue">
+<h3>Firefly <img alt="unit_red" src="_images/RED_UNIT.png" /> <img alt="unit_blue" src="_images/BLUE_UNIT.png" /><a class="headerlink" href="#firefly-unit-red-unit-blue" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>You can move each firefly in your team up to one tile distance per turn in any one of the four cardinal directions: north, east, south or west.
+If you don’t want to assign a move for a firefly, it’s okay! This automatically causes the firefly to rest in its current position and earn one health point.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Health point</dt>
+<dd>Each firefly has health points, starting with 1. It gains 1 health point on each turn in which it rests. A firefly dies and is removed off the board once its health points decline to 0. In the game view, health points are labeled on top of each firefly.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Attacking</dt>
+<dd>You can attack an enemy firefly by moving one (or several) of yours into it. Attacking will reduce the enemy’s health points by that of your firefly’s health points. Unless the enemy attacks you back, your firefly’s position and health points will remain the same.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Merging</dt>
+<dd>Fireflies can <em>merge</em> into each other and combine health points.</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tile-tile-red-tile-blue-tile-neutral">
+<h3>Tile <img alt="tile_red" src="_images/RED_TILE.png" /> <img alt="tile_blue" src="_images/BLUE_TILE.png" /> <img alt="tile_neutral" src="_images/NEUTRAL_TILE.png" /><a class="headerlink" href="#tile-tile-red-tile-blue-tile-neutral" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>At the start of the game, all tiles are grey (i.e. neutral). A tile will illuminate the colour of its most recent visitor. That is, if you visit a tile, you own that tile until your opponent visits it. Once a tile is visited, it will never revert to being neutral.</div></blockquote>
+</div>
+<div class="section" id="nest-nest-red-nest-blue">
+<h3>Nest <img alt="nest_red" src="_images/RED_NEST.png" /> <img alt="nest_blue" src="_images/BLUE_NEST.png" /><a class="headerlink" href="#nest-nest-red-nest-blue" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Each team begins with one nest already created on the board.</p>
+<p>You can build a nest by illuminating the adjacent tiles of a neutral tile.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/extensions.png"><img alt="_images/extensions.png" src="_images/extensions.png" style="width: 80px;" /></a>
+</div>
+<p>Once the nest is built, it will spawn a new firefly per turn.</p>
+<p>A group of nests with overlapping adjacent tiles is called a cluster.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/cluster.png"><img alt="_images/cluster.png" src="_images/cluster.png" style="width: 120px;" /></a>
+</div>
+<p>If even one nest in a cluster is destroyed, the entire cluster dies and becomes permanent enemy territory.</p>
+</div></blockquote>
+</div>
+<div class="section" id="permanent-territory-tile-redp-tile-bluep">
+<h3>Permanent territory <img alt="tile_redp" src="_images/RED_TILE_PERMANENT.png" /> <img alt="tile_bluep" src="_images/BLUE_TILE_PERMANENT.png" /><a class="headerlink" href="#permanent-territory-tile-redp-tile-bluep" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>If a nest is destroyed, it and its adjacent tiles become the enemy’s permanent territory. A permanent tile, unlike normal tiles, won’t change colour regardless of its newest visitor.</div></blockquote>
+</div>
+<div class="section" id="wall-wall">
+<h3>Wall <img alt="wall" src="_images/WALL_TILE.png" /><a class="headerlink" href="#wall-wall" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Fireflies can’t move into walls.</div></blockquote>
+</div>
+<div class="section" id="map">
+<h3>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>The map is symmetrical and wraps around itself. That is, if a firefly moves past an edge of the board, it’ll just find itself in the opposite side. The map is organized by (x, y) coordinates, counted by tiles. The top left coordinate of the map is (0, 0). The x-coordinate increases rightwards, and the y-coordinate increases downwards.</div></blockquote>
+</div>
+<div class="section" id="turn-limit">
+<h3>Turn Limit<a class="headerlink" href="#turn-limit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>The game ends when either you or your opponent lose all your nests, but only if this happens before the turn limit. The turn limit is the number of turns the game will run for before termination.</div></blockquote>
+</div>
+<div class="section" id="turn-timeout">
+<h3>Turn Timeout<a class="headerlink" href="#turn-timeout" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>In the tournament, the server will wait for AI’s to return next moves only up to 600ms (but you can configure this in the launcher for testing purposes). Keep this in mind if your AI performs time-expensive operations. It’s okay if you exceed the turn timeout once or twice - the game will continue running, but all your fireflies will rest for that turn.</div></blockquote>
+</div>
+</div>
+<div class="section" id="main-objective">
+<h2>Main objective<a class="headerlink" href="#main-objective" title="Permalink to this headline">¶</a></h2>
+<p>The main objective is simple: move fireflies, build your nests and destroy your opponent’s to acquire as much territory as you can! The game ends when one team loses all their nests (or at timeout). Each team earns 1 point per tile owned plus another 1 point if the tile is permanent territory. The player with the highest score wins the game.</p>
+</div>
+<div class="section" id="turns">
+<h2>Turns<a class="headerlink" href="#turns" title="Permalink to this headline">¶</a></h2>
+<p>The game is played in a series of turns. You can assign moves to <strong>as many of your own fireflies as you want</strong>. Any firefly that’s not assigned a move for that turn will rest and earn a health point.</p>
+<p>The game is simultaneous turn-based, which means that moves from both players are executed simultaneously per turn.</p>
+<p>At each turn, the server executes in order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Damage</dt>
+<dd><ul class="first last">
+<li>Damage is always calculated first, so fireflies can’t “dodge” attacks.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Movement</dt>
+<dd><ul class="first last">
+<li>Firefly move requests are assessed, then accepted or rejected by the server according to conflict resolution rules</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Tile colour change</dt>
+<dd><ul class="first last">
+<li>Tile colours are updated to correspond to the most recent visitor</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Nest destruction</dt>
+<dd><ul class="first last">
+<li>If a nest loses even one of its adjacent tiles, its entire cluster is destroyed and becomes permanent territory.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Nest creation</dt>
+<dd><ul class="first last">
+<li>Any neutral tile whose orthogonally adjacent tiles all belong to one team becomes a nest for that team.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Firefly spawn</dt>
+<dd><ul class="first last">
+<li>Each nest spawns one firefly per turn, but only if there is not already a newly spawned firefly resting on the nest.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="the-world">
+<h2>The World<a class="headerlink" href="#the-world" title="Permalink to this headline">¶</a></h2>
+<p>The world is situated on a symmetrical tile-based map. Each square on the map is either a tile or a wall. Initially, all tiles except for the starting nests and their adjacent tiles are neutral. The world wraps around itself, so if you move past an edge you’ll find yourself on the opposite side.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The starter pack includes a range of different maps that you can use for running your bot in the LUMINIS/Maps folder. The tournament will use a variety of maps that are not provided in the starter pack.</p>
+</div>
+<a class="reference internal image-reference" href="_images/World.png"><img alt="_images/World.png" class="align-center" src="_images/World.png" style="width: 280px;" /></a>
+</div>
+<div class="section" id="moving-your-fireflies">
+<h2>Moving your fireflies<a class="headerlink" href="#moving-your-fireflies" title="Permalink to this headline">¶</a></h2>
+<p>For every turn, there’s only one command that a firefly will need: “move into this tile beside you, or stay still”. Pretty simple, right? All your AI needs to do is assign a movement for each of your fireflies per turn :)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You don’t actually have to move all your fireflies every turn. If you don’t assign a move for some of them, they’ll just rest for that turn and earn a health point.</p>
+</div>
+<p>A firefly can move <strong>one tile distance per turn in any one of four cardinal directions</strong>: north, east, south or west. It may also rest for that turn.</p>
+<p>Fireflies can visit tiles but not walls or nests.</p>
+<p>Fireflies cause tiles to illuminate their team’s colour by moving into them. However, if your opponent moves into one of your tiles after you’ve left it, your opponent becomes the new owner of that tile (of course, until you send another one of your fireflies to reclaim it).</p>
+<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/units_visit_tiles.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>Fireflies illuminate and capture tiles</em></p><p>If you move a firefly into a tile that’s already occupied by a friendly firefly, it’ll merge with the other firefly. Also, if you move several friendly fireflies into the same tile, they’ll merge together.</p>
+<video class="small" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/units_merge.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>Friendly fireflies merge into one.</em></p><p>If you move a firefly into an enemy firefly, it inflicts damage on it. If the enemy firefly dies as a result of the damage, your firefly will move into its place. If it is still alive, your firefly stays in its original position.</p>
+<video class="small" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/units_attack.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>Fireflies attack each other.</em></p><p>If several fireflies of any team compete for the same empty tile, the team with the <em>highest sum of health points among competitors for that tile</em> gets the tile. The fireflies that belong to the team with lower health points sum die.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The game implements conflict resolution using topological sort, which is <strong>optional</strong> knowledge and beyond the scope of this section. (However, if you are interested, there’s a brief description in the FAQ.)</p>
+<p>We suggest that you don’t worry about it too much, but here’s the short summary:</p>
+<ul class="last simple">
+<li>If, in a given turn, there’s a chain of fireflies that are all trying to move down the chain, all fireflies will successfully move into their targets without merging into friendly fireflies or being blocked by an enemy. That is, move requests are executed in reverse order, starting with the firefly at the bottom of the chain. Damage, however, is always calculated.</li>
+<li>If there are two adjacent friendly fireflies trying to swap positions, they will do so successfully without merging.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-and-destroying-nests">
+<h2>Building and destroying nests<a class="headerlink" href="#building-and-destroying-nests" title="Permalink to this headline">¶</a></h2>
+<p>Nests are an important part of the game. By building nests, you spawn more firefly fireflies to cover more ground more quickly. By destroying enemy nests, you reduce your opponent’s firefly population and earn permanent territory. The game ends when you or your opponent lose all your nests.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The game ends once a team loses all their nests, but the winner is determined by the number of tiles! So be careful - you could quickly eliminate all your enemy’s nests and still lose the game.</p>
+</div>
+<p>Here’s how you can build a nest: colour the adjacent tiles around a neutral tile.</p>
+<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/units_build_nest.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>Building nests</em></p><p>A nest requires all its adjacent tiles to stay in its team’s colour to stay alive. If even one of its adjacent tiles are captured by the enemy, the nest dies, and it and its adjacent tiles all become permanent enemy territory.</p>
+<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/unit_destroys_one_nest.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>A nest is destroyed</em></p><p>The adjacent tiles around a nest don’t include walls. So you can build nests quickly around walls.</p>
+<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/nests_around_walls.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>Building and destroying nests around walls</em></p><p>If you have a group of nests with overlapping adjacent tiles, this is called a <strong>cluster</strong>. If even one nest in a cluster dies, all nests in the cluster also die and become permanent enemy territory.</p>
+<p>So make sure you defend your nests (and attack your opponent’s)!</p>
+<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+        <source src="_static/videos/unit_destroys_cluster.mp4" type="video/mp4">
+        Your browser does not support the HTML5 video tag. Try a different browser.
+</video>
+<p class="caption"><em>A large nest cluster is destroyed.</em></p></div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="challenge.html" class="btn btn-neutral float-right" title="Scoring and the Tournament" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ide.html" class="btn btn-neutral" title="Configuring your IDE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Orbis Access.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/video.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

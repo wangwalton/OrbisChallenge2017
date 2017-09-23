@@ -1,0 +1,57 @@
+a.icon.icon-home {
+	font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+div.version {
+	display: none;
+}
+
+.admonition.tldr {
+	background: #FAEFE7;
+	padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.admonition.tldr .admonition-title {
+	background: #DE986A;
+}
+
+.admonition.tldr p.last {
+	margin-bottom: 0;
+}
+
+video {
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 640px;
+	display: block;
+}
+
+video.large {
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 480px;
+	display: block;
+}
+
+video.small {
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 120px;
+	display: block;
+}
+
+video.medium {
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 240px;
+	display: block;
+}
+
+.caption {
+	text-align: center;
+	font-size: 12px;
+}

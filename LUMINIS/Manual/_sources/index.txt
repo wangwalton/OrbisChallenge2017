@@ -1,0 +1,47 @@
+Welcome!
+================================
+Welcome to the 2017 Orbis Challenge! 
+This year's Orbis Challenge will involve creating an AI for **Luminis**, a two-player territory expansion strategy game where you grow and manoeuvre your own species of fireflies to compete for territory against your opponent on a tile-based board.
+
+.. figure:: images/gameplay_shot.png
+   :align: center
+   :width: 320
+
+.. NOTE::
+  Even if you are familiar with Java or Python, you should still read the documentation. The documents contain important information about the game, grading and competition rules.
+
+
+Setting Up
+----------
+.. toctree::
+   :maxdepth: 5
+   
+   Installing Java/Python <installing>
+   Quick Start Guide <quick>
+   Configuring Your IDE <ide>
+
+Playing the game
+--------------------------
+.. toctree::
+   :maxdepth: 3
+
+   Game Introduction <game>
+   Scoring and Tournament <challenge>
+   Building custom maps <custom_maps>
+
+API Documentation
+-----------------
+.. toctree::
+   :maxdepth: 5
+   
+   Java API Basics <javaapi>
+   Python API Basics <pythonapi>
+   Java Docs <_static/javadoc/index.html#://>
+   Python docstrings <PythonClientAPI.Game>
+
+FAQ
+---
+.. toctree::
+   :maxdepth: 1
+
+   FAQ <faq>

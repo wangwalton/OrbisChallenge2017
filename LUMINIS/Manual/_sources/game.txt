@@ -1,0 +1,268 @@
+Game Introduction
+=================
+
+.. figure:: images/gameplay_shot.png
+	:align: center
+	:width: 320
+
+.. admonition:: TL;DR
+	:class: tldr
+   	
+   	* The objective of the game is to expand territory on a tile board.
+
+   		* Each tile on the board represents territory.
+
+	* You control a team of fireflies on the board.
+   		
+		* Move a firefly into a tile to illuminate it.
+   		* You can move as many fireflies as you want per turn, but each firsefly can move only a maximum of 1 tile distance per turn.
+   	
+	* Fireflies can move into empty tiles, merge into other friendly fireflies or attack enemies. It can't move into walls.
+	* Build a nest by illuminating adjacent tiles of a neutral tile.
+	* Destroy an enemy nest by infiltrating one of its adjacent tiles.
+		
+		* A destroyed enemy nest and its adjacent tiles become your permanent territory 
+		* Unlike normal territory, permanent territory never changes owners once you capture it.
+   		
+Summary
+~~~~~~~
+
+Luminis is a two-player territory expansion strategy game where you command a team of fireflies to compete for territory against your opponent on a tile-based board. You and your opponent each begin with a single nest from which new fireflies are spawned at each turn. Every square on the board, except for walls, is a luminescent tile that illuminates the colour of its most recent visitor.
+
+You can build a nest by colouring the adjacent tiles of a neutral tile (i.e. a tile that has never been visited yet). You need to protect a nest's adjacent tiles to keep it alive. If your opponent acquires even just one of its adjacent tiles, your nest is destroyed, and it and its adjacent tiles become your opponent's permanent territory. Unlike normal tiles, permanent territory will not change owners regardless of its most recent visitor, so you can never reclaim it.
+
+If you have a group of nests with overlapping adjacent tiles, this is called a cluster. If just one nest in the cluster is destroyed, the entire cluster is also destroyed and becomes your opponent's permanent territory.
+
+The game ends if you eliminate all your opponent's nests, or if your opponent eliminates all your nests (or at timeout). You earn 1 point per tile you own at the end of the game - plus another point per permanent tile. You win if your score is higher than that of your opponent.
+
+Demo video
+~~~~~~~~~~
+
+.. raw:: html
+
+	<video class="large" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/gameplay.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+
+|
+|
+
+Definitions
+~~~~~~~~~~~
+
+Firefly |unit_red| |unit_blue|
+------------------------------
+
+	You can move each firefly in your team up to one tile distance per turn in any one of the four cardinal directions: north, east, south or west.
+	If you don't want to assign a move for a firefly, it's okay! This automatically causes the firefly to rest in its current position and earn one health point.
+
+	* Health point
+		Each firefly has health points, starting with 1. It gains 1 health point on each turn in which it rests. A firefly dies and is removed off the board once its health points decline to 0. In the game view, health points are labeled on top of each firefly.
+	* Attacking
+		You can attack an enemy firefly by moving one (or several) of yours into it. Attacking will reduce the enemy's health points by that of your firefly's health points. Unless the enemy attacks you back, your firefly's position and health points will remain the same.
+	* Merging
+		Fireflies can *merge* into each other and combine health points.
+
+Tile |tile_red| |tile_blue| |tile_neutral|
+------------------------------------------
+
+	At the start of the game, all tiles are grey (i.e. neutral). A tile will illuminate the colour of its most recent visitor. That is, if you visit a tile, you own that tile until your opponent visits it. Once a tile is visited, it will never revert to being neutral.
+
+Nest |nest_red| |nest_blue|
+---------------------------
+
+	Each team begins with one nest already created on the board.
+
+	You can build a nest by illuminating the adjacent tiles of a neutral tile.
+	
+	.. figure:: images/extensions.png
+		:width: 80
+		:align: center
+
+	Once the nest is built, it will spawn a new firefly per turn.
+
+	A group of nests with overlapping adjacent tiles is called a cluster.
+
+	.. figure:: images/cluster.png
+		:width: 120
+		:align: center
+
+	If even one nest in a cluster is destroyed, the entire cluster dies and becomes permanent enemy territory.	
+	
+Permanent territory |tile_redp| |tile_bluep|
+--------------------------------------------
+
+	If a nest is destroyed, it and its adjacent tiles become the enemy's permanent territory. A permanent tile, unlike normal tiles, won't change colour regardless of its newest visitor.
+
+Wall |wall|
+-----------
+
+	Fireflies can't move into walls.
+
+Map
+---
+
+	The map is symmetrical and wraps around itself. That is, if a firefly moves past an edge of the board, it'll just find itself in the opposite side. The map is organized by (x, y) coordinates, counted by tiles. The top left coordinate of the map is (0, 0). The x-coordinate increases rightwards, and the y-coordinate increases downwards.
+
+Turn Limit
+----------
+
+	The game ends when either you or your opponent lose all your nests, but only if this happens before the turn limit. The turn limit is the number of turns the game will run for before termination.
+
+Turn Timeout
+------------
+
+	In the tournament, the server will wait for AI's to return next moves only up to 600ms (but you can configure this in the launcher for testing purposes). Keep this in mind if your AI performs time-expensive operations. It's okay if you exceed the turn timeout once or twice - the game will continue running, but all your fireflies will rest for that turn.
+
+
+.. |unit_red| image:: images/RED_UNIT.png
+.. |unit_blue| image:: images/BLUE_UNIT.png
+.. |nest_red| image:: images/RED_NEST.png
+.. |nest_blue| image:: images/BLUE_NEST.png
+.. |tile_red| image:: images/RED_TILE.png
+.. |tile_blue| image:: images/BLUE_TILE.png
+.. |tile_neutral| image:: images/NEUTRAL_TILE.png
+.. |tile_redp| image:: images/RED_TILE_PERMANENT.png
+.. |tile_bluep| image:: images/BLUE_TILE_PERMANENT.png
+.. |wall| image:: images/WALL_TILE.png
+
+Main objective
+~~~~~~~~~~~~~~
+The main objective is simple: move fireflies, build your nests and destroy your opponent's to acquire as much territory as you can! The game ends when one team loses all their nests (or at timeout). Each team earns 1 point per tile owned plus another 1 point if the tile is permanent territory. The player with the highest score wins the game.
+
+Turns
+~~~~~
+The game is played in a series of turns. You can assign moves to **as many of your own fireflies as you want**. Any firefly that's not assigned a move for that turn will rest and earn a health point.
+
+The game is simultaneous turn-based, which means that moves from both players are executed simultaneously per turn.
+
+At each turn, the server executes in order:
+
+	1. Damage
+		* Damage is always calculated first, so fireflies can't "dodge" attacks.
+	2. Movement
+		* Firefly move requests are assessed, then accepted or rejected by the server according to conflict resolution rules
+	3. Tile colour change
+		* Tile colours are updated to correspond to the most recent visitor
+	4. Nest destruction
+		* If a nest loses even one of its adjacent tiles, its entire cluster is destroyed and becomes permanent territory.
+	5. Nest creation
+		* Any neutral tile whose orthogonally adjacent tiles all belong to one team becomes a nest for that team.
+	6. Firefly spawn
+		* Each nest spawns one firefly per turn, but only if there is not already a newly spawned firefly resting on the nest.
+
+The World
+~~~~~~~~~
+
+The world is situated on a symmetrical tile-based map. Each square on the map is either a tile or a wall. Initially, all tiles except for the starting nests and their adjacent tiles are neutral. The world wraps around itself, so if you move past an edge you'll find yourself on the opposite side.
+
+.. NOTE::
+	The starter pack includes a range of different maps that you can use for running your bot in the LUMINIS/Maps folder. The tournament will use a variety of maps that are not provided in the starter pack.
+
+.. image:: images/World.png
+	:width: 280
+	:align: center
+
+Moving your fireflies
+~~~~~~~~~~~~~~~~~~~~~
+
+For every turn, there's only one command that a firefly will need: "move into this tile beside you, or stay still". Pretty simple, right? All your AI needs to do is assign a movement for each of your fireflies per turn :)
+
+.. NOTE::
+	You don't actually have to move all your fireflies every turn. If you don't assign a move for some of them, they'll just rest for that turn and earn a health point.
+
+A firefly can move **one tile distance per turn in any one of four cardinal directions**: north, east, south or west. It may also rest for that turn.
+
+Fireflies can visit tiles but not walls or nests.
+
+Fireflies cause tiles to illuminate their team's colour by moving into them. However, if your opponent moves into one of your tiles after you've left it, your opponent becomes the new owner of that tile (of course, until you send another one of your fireflies to reclaim it).
+
+.. raw:: html
+
+	<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/units_visit_tiles.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>Fireflies illuminate and capture tiles</em></p>
+
+If you move a firefly into a tile that's already occupied by a friendly firefly, it'll merge with the other firefly. Also, if you move several friendly fireflies into the same tile, they'll merge together.
+
+.. raw:: html
+
+	<video class="small" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/units_merge.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>Friendly fireflies merge into one.</em></p>
+
+If you move a firefly into an enemy firefly, it inflicts damage on it. If the enemy firefly dies as a result of the damage, your firefly will move into its place. If it is still alive, your firefly stays in its original position.
+
+.. raw:: html
+
+	<video class="small" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/units_attack.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>Fireflies attack each other.</em></p>
+
+If several fireflies of any team compete for the same empty tile, the team with the *highest sum of health points among competitors for that tile* gets the tile. The fireflies that belong to the team with lower health points sum die.
+
+.. NOTE::
+	The game implements conflict resolution using topological sort, which is **optional** knowledge and beyond the scope of this section. (However, if you are interested, there's a brief description in the FAQ.)
+
+	We suggest that you don't worry about it too much, but here's the short summary:
+
+	* If, in a given turn, there's a chain of fireflies that are all trying to move down the chain, all fireflies will successfully move into their targets without merging into friendly fireflies or being blocked by an enemy. That is, move requests are executed in reverse order, starting with the firefly at the bottom of the chain. Damage, however, is always calculated.
+	* If there are two adjacent friendly fireflies trying to swap positions, they will do so successfully without merging.
+
+
+Building and destroying nests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Nests are an important part of the game. By building nests, you spawn more firefly fireflies to cover more ground more quickly. By destroying enemy nests, you reduce your opponent's firefly population and earn permanent territory. The game ends when you or your opponent lose all your nests.
+
+.. NOTE::
+	The game ends once a team loses all their nests, but the winner is determined by the number of tiles! So be careful - you could quickly eliminate all your enemy's nests and still lose the game.
+
+Here's how you can build a nest: colour the adjacent tiles around a neutral tile.
+
+.. raw:: html
+
+	<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/units_build_nest.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>Building nests</em></p>
+
+A nest requires all its adjacent tiles to stay in its team's colour to stay alive. If even one of its adjacent tiles are captured by the enemy, the nest dies, and it and its adjacent tiles all become permanent enemy territory.
+
+.. raw:: html
+
+	<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/unit_destroys_one_nest.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>A nest is destroyed</em></p>
+
+The adjacent tiles around a nest don't include walls. So you can build nests quickly around walls.
+
+.. raw:: html
+
+	<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/nests_around_walls.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>Building and destroying nests around walls</em></p>
+
+If you have a group of nests with overlapping adjacent tiles, this is called a **cluster**. If even one nest in a cluster dies, all nests in the cluster also die and become permanent enemy territory.
+
+So make sure you defend your nests (and attack your opponent's)!
+
+.. raw:: html
+
+	<video class="medium" controls poster="_images/video_placeholder_square.png" onclick="playPauseVideo(this);">
+		<source src="_static/videos/unit_destroys_cluster.mp4" type="video/mp4">
+		Your browser does not support the HTML5 video tag. Try a different browser.
+	</video>
+	<p class="caption"><em>A large nest cluster is destroyed.</em></p>

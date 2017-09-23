@@ -1,0 +1,30 @@
+FAQ
+===
+
+**Q: How does conflict resolution actually work?**
+
+A: The game uses reverse `topological sorting <https://en.wikipedia.org/wiki/Topological_sorting>`_ on a move requests graph at each turn to determine the order in which the units' move requests are executed. The move requests graph is a `directed graph <https://en.wikipedia.org/wiki/Directed_graph>`_ in which vertices represent each point on the board and edges represent move requests by players. A reverse topological sort of the move requests graph orders the vertices such that the ordering respects every directed edge ("move request from point x to point y") in the graph. Move requests are executed in order of the reverse topological sort.
+
+
+**Q: If one of my units attacks an enemy unit, will it also always lose health points?**
+
+A: If the enemy unit also attacks your unit in the same turn, your unit will lose health. But if only you attack, your health point remains the same.
+
+**Q: Can a tile return to being neutral after it's been visited by a firefly unit?**
+
+A: No. A tile is neutral only from the start of the game to the time at which it's first visited by any team. Its colour can change between teams, but it'll never return back to neutral.
+
+**Q: Can you build a nest on a non-neutral tile?**
+
+A: No. Only neutral tiles can become nests
+
+**Q: My AI exceeds time-out once or twice, but not often. Will it be disqualified?**
+
+A: Don't worry - the game will continue to run even if your AI exceeds time-out. However, any moves you make will be skipped, and all your units will rest for that turn.
+
+**Q: When does a unit gain health points**
+
+A: A unit gains health points any time it rests, either by choice or forcibly. That is, even if a unit was instructed to move to a neighbouring tile, if the server rejects that move (e.g. because of a wall or a nest), it'll gain a health point.
+
+**Q: If several units merge, and one of the units are at rest, will the merged unit earn a health point?**
+A: Yes. If at least one of the merging units are at rest, then the newly merged unit will earn 1 health point.

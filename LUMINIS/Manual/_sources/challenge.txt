@@ -1,0 +1,73 @@
+Scoring and the Tournament
+==========================
+
+Here is where you can find information on how to do well in the Challenge. 
+
+	
+Grading Scheme
+--------------
+
+Scores are calculated at the end of the game. 
+
+The game ends when one team loses all their nests or at time-out.
+
+At the end of the game, each team earns 1 point per tile owned. Plus, each team earns another 1 point per tile in their permanent territories. So it's possible for you to eliminate your opponent's nests and still lose the game!
+
+
+Submissions
+-----------
+
+Follow the following steps when you are ready to submit your submission. 
+
+1. Make sure all your source code and external libraries are zipped up. **The zip file containing your files should be named exactly after your team name.**
+
+.. Warning::
+	To ensure your AI works correctly, make sure you test it in a game before submitting!
+
+.. Note::
+	* We only accept .zip files that are under 5 MB in size. 
+	* The libraries that came in the development kits will be replaced when grading, so feel free to exclude them when creating your archive.
+	* Include any custom libraries that you use
+
+2. Upload your newly created archives on 'Submit your AI' on your dashboard on The Challenge website. If you are working in a team, only one member has to upload it.
+
+.. Note::	
+	You're welcome to submit more than once, but only your latest submission before the submission deadline will be graded, so make sure that one works!
+
+Competition Format
+--------------------
+
+The tournament is split into two parts. 
+
+    1. The qualifiers
+    	Scores are summed over all matches in the qualifers, and the top 20 scores will advance to the round robins.
+    2. The round robins
+    	Each entry will fight every other entry to the end! The top 5 winners are selected in this round.
+
+The top 20 AIs from the round robin will be chosen for code review.
+The top 5 winners will be determined based on both their performance in the competition, and their code review.
+Winners will need to give a short presentation.
+
+Settings
+````````
+
+All games will be played using the following settings: 
+
+	* Board is symmetrical, and its size is set at 19x19.
+	* Maximum amount of time allowed for your AI to make a move is 600 milliseconds
+	
+Qualifying Round
+`````````````````
+In this round your submission will play on various maps against 3 qualifier bots of various difficulties. The top 20 entries with the highest summed scores over the 3 matches will advance to the next round. (Time limit: 100 turns)
+
+Round Robin Finals
+```````````````````
+Suppose your submission made it to the top 20. Congratulations! There are 19 other players here with you, so it's time to battle it out. You'll be playing a match against each opponent on multiple maps, it's time to show them who's the boss! (Turn limit: 200 turns)
+
+Algorithm and Code Review
+`````````````````````````
+This is the part where we evaluate your code! Your AI has proven that it can perform, but how well-coded is it? Be sure to make your code as readable as possible and leave some comments for the code reviewers to read!
+
+Presentations
+`````````````
+The teams that have their submissions land in the top 5 after the playoffs and code review are asked to give a short presentation to talk about their key strategies, the problems they faced and how they overcame them.

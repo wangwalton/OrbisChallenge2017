@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Making custom maps &mdash; Orbis Challenge 2017 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom-styles.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Orbis Challenge 2017 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="Java API Basics" href="javaapi.html"/>
+        <link rel="prev" title="Scoring and the Tournament" href="challenge.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Orbis Challenge 2017
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing Java/Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ide.html">Configuring Your IDE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Scoring and Tournament</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building custom maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-bmp">The BMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-a-navigation-cache">Compiling a Navigation Cache</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi.html">Python API Basics</a></li>
+<li class="toctree-l1"><a class="reference external" href="_static/javadoc/index.html#://">Java Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonClientAPI.Game.html">Python docstrings</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orbis Challenge 2017</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Making custom maps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/custom_maps.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="making-custom-maps">
+<h1>Making custom maps<a class="headerlink" href="#making-custom-maps" title="Permalink to this headline">¶</a></h1>
+<p>All the maps for the game are located in the aptly named Maps folder.</p>
+<p>Making custom maps for Fireflies is very easy.
+As the more observant competitor will have noticed, each map consists of two files - a .bmp and a .nac file.</p>
+<p>In order to make your own map, you must first create the BMP. The .nac (the <strong>na</strong>vigation <strong>c</strong>ache) will be generated by the Map Compiler.</p>
+<div class="section" id="the-bmp">
+<h2>The BMP<a class="headerlink" href="#the-bmp" title="Permalink to this headline">¶</a></h2>
+<p>The BMP consists of a very simple format - each pixel represents a single tile.
+The different colours are different tile types. Note that the alpha channel has a special purpose.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="18%" />
+<col width="38%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>R, G, B</td>
+<td>Color Name</td>
+<td>Tile function</td>
+<td>Tile Image</td>
+</tr>
+<tr class="row-even"><td>0, 0, 0</td>
+<td>Black</td>
+<td>Wall</td>
+<td><img alt="wall" src="_images/WALL_TILE.png" /></td>
+</tr>
+<tr class="row-odd"><td>255, 255, 255</td>
+<td>White</td>
+<td>Neutral tile</td>
+<td><img alt="tile" src="_images/NEUTRAL_TILE.png" /></td>
+</tr>
+<tr class="row-even"><td>0, 0, 255</td>
+<td>Blue</td>
+<td>Blue Nest</td>
+<td><img alt="blue" src="_images/BLUE_NEST.png" /></td>
+</tr>
+<tr class="row-odd"><td>255, 0, 0</td>
+<td>Red</td>
+<td>Red Nest</td>
+<td><img alt="red" src="_images/RED_NEST.png" /></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul>
+<li><p class="first">There can only be one starting nest per team in a map</p>
+</li>
+<li><p class="first">The server will try to set the ordered directions of the units of each teams such that a game is perfectly symmetrical between two identical AIs. However, this only works if:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Given that the center of the map is (0, 0), the map is symmetrical along x = 0, y = 0 or y = (+/-) x.</li>
+<li>The starting points lie on the same x-coordinate, the same y-coordinate or equidistantly from the center of the map on the same diagonal line that is parallel with y = (+/-) x.</li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p class="last">Please reference the provided maps in the starter kit for examples of symmetrical maps.
+It’s okay if the map isn’t symmetrical - the game will still run. The server will use default ordered directions for each team.</p>
+</div>
+</div>
+<div class="section" id="compiling-a-navigation-cache">
+<h2>Compiling a Navigation Cache<a class="headerlink" href="#compiling-a-navigation-cache" title="Permalink to this headline">¶</a></h2>
+<p>Compiling a navigation cache is super easy.
+All you have to do is run the included CompileMap script (located in the Maps folder), and pass it your .bmp file as a parameter.</p>
+<p>Make sure your bmp file is in the Maps folder, and then run the script on it.</p>
+<p>For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">CompileMap</span><span class="o">.</span><span class="n">bat</span> <span class="n">MySuperAwesomeCrazyEpicUberMap</span><span class="o">.</span><span class="n">bmp</span>
+</pre></div>
+</div>
+<p>It will crunch for a few seconds and spit out <em>MySuperAwesomeCrazyEpicUberMap.nac</em></p>
+<p>And that’s it! Note that while most maps of the size and complexity included with the starter kit will compile in a few seconds,
+very large and open maps will take exponentially more time to compile, so you may have to go grab a coffee or two.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="javaapi.html" class="btn btn-neutral float-right" title="Java API Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="challenge.html" class="btn btn-neutral" title="Scoring and the Tournament" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Orbis Access.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/video.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

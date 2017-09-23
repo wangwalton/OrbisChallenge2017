@@ -1,0 +1,145 @@
+Java API Basics
+===============
+
+This page only contains the basics of the Java API. For the full API, see the Javadocs, `HERE <_static/javadoc/index.html>`_.
+
+
+.. admonition:: TL;DR
+   :class: tldr
+
+	Your task is to implement the playerAi.doMove(World world, FriendlyUnit[] friendlies, EnemyUnit[] enemies) function in the PlayerAI.java file. The doMove function is invoked at each turn in the game. The PlayerAI class is instantialized just once at the beginning of the game, and that instance is used for the rest of the game. 
+
+	We've provided some cool API that you can use in your doMove function. For example, use **world.move(FriendlyUnit unit, Point target)** to move a unit one point closer to any point on the map. You can see the actual result of your **previous** move with **friendlyUnit.getLastMoveResult()**. Don't store a FriendlyUnit object in your PlayerAI instance, because it'll soon have outdated fields. You can keep track of a unit across turns by saving its unique UUID somewhere in your PlayerAI instance and retrieving the actual unit with **world.getUnit(String uuid)**. 
+
+	There are other API for you to experiment with, such as **world.getShortestPath**, **world.getClosestCapturableTileFrom**, **world.getEnemyNestClusters**. Have fun!
+
+.. WARNING::
+  Don't change the function definition for doMove. This function is called by the client code (which you also shouldn't modify) because when you submit your file only your PlayerAI file and any additional libraries are kept and any client code is removed. Thus, if you change the method, your code will cause an Exception and ultimately invalidate all of your work.
+
+The basics
+----------
+
+.. code-block:: java
+	
+	// A FriendlyUnit represents a unit in your team
+	FriendlyUnit unit;
+	// The friendlies argument in the doMove function contains all your living firefly units in order of health points
+	// So you can get the strongest unit in your team like this
+	unit = friendlies[friendlies.length - 1];
+	
+	// All units have a unique UUID that you can track them by.
+	friendlyUnit.getUuid() // returns the unit's unique UUID
+	friendlyUnitA.equals(friendlyUnitB) // returns true if and only if friendlyUnitA and friendlyUnitB have the same UUID
+	// If you've saved a unit's UUID in your PlayerAI instance, you can locate it using World.getUnit(String uuid)
+	// For example, say that you have a List of uuids in this.savedUuids, where this is the PlayerAI instance
+	for (String uuid: savedUuids) {
+		FriendlyUnit unit = world.getUnit(uuid);
+		if (unit != null) { // Make sure that the saved unit is still alive!
+			... do something with unit ...
+		}
+	}
+
+	// You can check a unit's position
+	unit.getPosition(); // Returns a Point object that represents the (x,y) position of the unit
+	// ... its health
+	unit.getHealth();
+	// ... and its last move result
+	unit.getLastMoveResult(); // Returns a MoveResult enum
+	/*
+	Here are MoveResult types that you should know:
+	MoveResult.MOVE_INVALID: You tried to move into a point that is not within the bounds of the map or not within 1 tile distance of your unit
+	MoveResult.MOVE_SUCCESS: Your unit successfully moved into its target (or rested intentionally)
+	MoveResult.DAMAGE_SUCCESS: Your unit successfully damaged an enemy unit but didn't move into its tile
+	MoveResult.BLOCKED_BY_WALL: Your unit tried to enter into a wall
+	MoveResult.BLOCKED_BY_NEST: Your unit tried to enter into a nest
+	MoveResult.NEWLY_SPAWNED: Your unit is newly spawned
+	MoveResult.NEWLY_MERGED: Your unit is a newly merged unit
+	*/
+
+	// If your units merge, the merged units will disappear, and a new unit with their combined health points will appear. If you're keeping track of your units across turns, it might be useful to check if a unit has merged with another:
+	unit.isMergedWithUnit(someOtherUnitUuid) // returns true if a unit with UUID someOtherUnitUuid merged into this unit
+
+	// You can also check an EnemyUnit's health and position
+	// The enemies argument in your doMove function contains all living enemy units in order of health points
+	EnemyUnit weakestEnemy = enemies[0];
+	weakestEnemy.getHealth();
+	weakestEnemy.getPosition();
+
+	// You can move friendly units using the world.move(FriendlyUnit unit, Point target) method.
+	// For instance, this moves someFriendlyUnit one step closer to (10, 10) and returns MoveType.MOVE if
+	// there is a path from someFriendlyUnit.getPosition() to (10, 10) and MoveType.REST otherwise.
+	world.move(someFriendlyUnit, new Point(10, 10));
+	// Side note: a Point object represents an (x, y) coordinate on the board. The top-left corner is (0, 0). X-coordinates increase rightwards per tile. Y-coordinates increase downwards per tile.
+
+	// world.move(FriendlyUnit unit, Point target) doesn't take into account other units or nests when deciding
+	// the shortest path from the unit's position to the target. It simply looks up walls and tiles from a cache.
+	// You can use world.getShortestPath(Point from, Point to, List<Point> avoid) to include "avoid" points in your path-finding.
+	List<Point> enemyPositions = new ArrayList<>();
+	for (EnemyUnit unit: enemies) {
+		enemyPositions.add(unit.getPosition());
+	}
+	// This finds the shortest path between someFriendlyUnit's position and (10, 10) that doesn't include enemy unit positions
+	List<Point> path = world.getShortestPath(someFriendlyUnit.getPosition(), new Point(10, 10), enemyPositions);
+	if (path != null) world.move(someFriendlyUnit, path.get(0));
+
+
+Path-finding
+------------
+
+.. code-block:: java
+	
+	// The API provides some path-finding methods that you can use
+	
+	// ... for finding units
+	EnemyUnit badUnit = world.getClosestEnemyFrom(friendlyUnit.getPosition(), null); // returns the closest EnemyUnit from friendlyUnit's position, or null if there is none
+	Collection<FriendlyUnit> avoid = new ArrayList<>();
+	avoid.add(friendlyUnit);
+	FriendlyUnit niceUnit = world.getClosestFriendlyFrom(friendlyUnit.getPosition(), avoid); // returns the closest FriendlyUnit from friendlyUnit, except friendlyUnit
+
+	// ... for finding tiles
+	// A Tile represents a colour-changing tile. You can check its owner with tile.isFriendly(), tile.isEnemy() and tile.isNeutral() and its state with tile.isPermanentlyOwned()
+	Tile tile = world.getClosestCapturableTileFrom(friendlyUnit.getPosition(), null); // returns closest non-permanent enemy or neutral Tile from friendlyUnit's position, or null if there is none
+	Collection<Point> allPermanentEnemyTilePositions = Arrays.stream(world.get_enemy_tiles()).filter(tile -> tile.isPermanentlyOwned()).map(tile -> tile.getPosition()).collect(Collectors.toList());
+	Tile tile = world.getClosestCapturableTileFrom(friendlyUnit.getPosition(), allPermanentEnemyTilePositions); // returns closest non-permanent enemy or neutral Tile from friendlyUnit's position excluding ones whose positions are in allPermanentEnemyTilePositions, or null if there is none
+
+	// ... for finding nests
+	Point enemyNest = world.getClosestEnemyNestFrom(friendlyUnit.getPosition(), null)
+
+	// ... for calculating shortest path
+	List<Point> path = world.getShortestPath(friendlyUnit.getPosition(), badUnit.getPosition(), allNestAndWallPositions); // returns shortest path between friendlyUnit's position and badUnit's position that doesn't include any points in allNestAndWallPositions, or null if there is none
+
+	// Warning: world.getShortestPath may come at a cost of performance. To account for performance, you might try something like
+	Point target = new Point(10, 10);
+	if (friendlyUnit.getLastMoveResult() == MoveResult.BLOCKED_BY_NEST || friendlyUnit.getLastMoveResult() == MoveResult.BLOCKED_BY_WALL) {
+		// use world.getShortestPath only if you've actually hit a wall or a nest
+		List<Point> path = world.getShortestPath(friendlyUnit.getPosition(), target, someAvoidPoints)
+		if (path != null) {
+			target = path.get(0);
+		}
+	}
+	world.move(friendlyUnit, target);
+
+	// There is also a more general path-finding function that takes in a custom predicate as an argument
+	// For example, this finds the closest EnemyUnit by FriendlyUnit unit whose health is lower than unit
+	Collection<Point> weakEnemyPositions = Arrays.stream(enemies).filter(enemy -> enemy.getHealth() < unit.getHealth()).map(enemy -> enemy.getPosition()).collect(Collectors.toList() // where enemies is the array of EnemyUnits given in the doMove function
+	Point closestWeakEnemyPosition = world.getClosestPointFrom(unit.getPosition(), point -> weakEnemyPositions.contains(point));
+
+Nest tactics
+------------
+
+.. code-block:: java
+	
+	// Find neutral tiles
+	Tile[] neutralTiles = world.getNeutralTiles();
+	// Find just tiles around a point
+	Map<Direction, Tile> tilesAround = world.getTilesAround(new Point(10, 10));
+
+	// Note: Direction indicates the compass directions and has five types: Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST and Direction.NOWHERE
+	
+	// Find enemy nest positions
+	Point[] enemyNestPositions = world.getEnemyNestPositions();
+	// Find enemy nest clusters
+	Set<Point>[] enemyClusters = world.getEnemyNestClusters(); // each set in the array is an enemy nest cluster
+
+
+Feel free to explore the rest of the API in the Javadocs!

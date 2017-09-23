@@ -1,0 +1,1 @@
+java -jar FF-Map-Compiler.jar %*

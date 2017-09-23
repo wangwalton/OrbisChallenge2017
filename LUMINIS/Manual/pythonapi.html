@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python API Basics &mdash; Orbis Challenge 2017 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom-styles.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Orbis Challenge 2017 1.0.0 documentation" href="index.html"/>
+        <link rel="next" title="PythonClientAPI.Game package" href="PythonClientAPI.Game.html"/>
+        <link rel="prev" title="Java API Basics" href="javaapi.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Orbis Challenge 2017
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing Java/Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ide.html">Configuring Your IDE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Scoring and Tournament</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_maps.html">Building custom maps</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="javaapi.html">Java API Basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API Basics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-basics">The basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#path-finding">Path-finding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nest-tactics">Nest tactics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="_static/javadoc/index.html#://">Java Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PythonClientAPI.Game.html">Python docstrings</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Orbis Challenge 2017</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Python API Basics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pythonapi.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-api-basics">
+<h1>Python API Basics<a class="headerlink" href="#python-api-basics" title="Permalink to this headline">¶</a></h1>
+<p>This page only contains the basics of the Python API. For the full API, see the <span class="xref std std-doc">Python docs</span>.</p>
+<div class="tldr admonition">
+<p class="first admonition-title">TL;DR</p>
+<blockquote class="last">
+<div><p>Your task is to implement the playerAi.do_move(world, friendlies, enemies) function in the PlayerAI.java file. The do_move function is invoked at each turn in the game. The PlayerAI class is instantialized just once at the beginning of the game, and that instance is used for the rest of the game.</p>
+<p>We’ve provided some cool API that you can use in your do_move function. For example, use <strong>world.move(unit, target)</strong> to move a unit one point closer to any point on the map. You can see the actual result of your <strong>previous</strong> move with <strong>friendly_unit.last_move_result</strong>. Don’t store a FriendlyUnit object in your PlayerAI instance, because it’ll soon have outdated fields. You can keep track of a unit across turns by saving its unique UUID somewhere in your PlayerAI instance and retrieving the actual unit with <strong>world.get_unit(uuid)</strong>.</p>
+<p>There are other API for you to experiment with, such as <strong>world.get_shortest_path</strong>, <strong>world.get_closest_capturable_tile_from</strong>, <strong>world.get_enemy_nest_clusters</strong>. Have fun!</p>
+</div></blockquote>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Don’t change the function definition for do_move. This function is called by the client code (which you also shouldn’t modify) because when you submit your file only your PlayerAI file and any additional libraries are kept and any client code is removed. Thus, if you change the method, your code will cause an Exception and ultimately invalidate all of your work.</p>
+</div>
+<div class="section" id="the-basics">
+<h2>The basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># A FriendlyUnit represents a unit in your team</span>
+<span class="c1"># The friendlies argument in the do_move function contains all your living firefly units in order of health points</span>
+<span class="c1"># So you can get the strongest unit in your team like this</span>
+<span class="n">unit</span> <span class="o">=</span> <span class="n">friendlies</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># All units have a unique UUID that you can track them by</span>
+<span class="n">uuid</span> <span class="o">=</span> <span class="n">friendly_unit</span><span class="o">.</span><span class="n">uuid</span>
+<span class="k">print</span><span class="p">(</span><span class="n">friendly_unit_a</span> <span class="o">==</span> <span class="n">friendly_unit_b</span><span class="p">)</span> <span class="c1"># returns True if and only if friendly_unit_a and friendly_unit_b have the same UUID</span>
+<span class="c1"># If you&#39;ve saved a unit&#39;s UUID in your PlayerAI instance, you can locate it using the World.get_unit(uuid)</span>
+<span class="c1"># For example, say that you have a list of uuids in self.saved_uuids, where self is the PlayerAI instance</span>
+<span class="k">for</span> <span class="n">uuid</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">saved_uuids</span><span class="p">:</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_unit</span><span class="p">(</span><span class="n">uuid</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unit</span><span class="p">:</span> <span class="c1"># Make sure that the saved unit is still alive!</span>
+                <span class="o">...</span> <span class="n">do</span> <span class="n">something</span> <span class="k">with</span> <span class="n">unit</span> <span class="o">...</span>
+
+<span class="c1"># You can check a unit&#39;s position</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">position</span>
+<span class="c1"># ... its health</span>
+<span class="n">health</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">health</span>
+<span class="c1"># ... and its last move result</span>
+<span class="n">whatHappenedLastTime</span> <span class="o">=</span> <span class="n">unit</span><span class="o">.</span><span class="n">last_move_result</span>
+
+<span class="c1"># Here are MoveResult types that you should know:</span>
+<span class="c1"># MoveResult.MOVE_INVALID: You tried to move into a point that is not within the bounds of the map or not within 1 tile distance of your unit</span>
+<span class="c1"># MoveResult.MOVE_SUCCESS: Your unit successfully moved into its target (or rested intentionally)</span>
+<span class="c1"># MoveResult.DAMAGE_SUCCESS: Your unit successfully damaged an enemy unit but didn&#39;t move into its tile</span>
+<span class="c1"># MoveResult.BLOCKED_BY_WALL: Your unit tried to enter into a wall</span>
+<span class="c1"># MoveResult.BLOCKED_BY_NEST: Your unit tried to enter into a nest</span>
+<span class="c1"># MoveResult.NEWLY_SPAWNED: Your unit is newly spawned</span>
+<span class="c1"># MoveResult.NEWLY_MERGED: Your unit is a newly merged unit</span>
+
+<span class="c1"># If your units merge, the merged units will disappear, and a new unit with their combined health points will appear. If you&#39;re keeping track of your units across turns, it might be useful to check if a unit has merged with another:</span>
+<span class="n">unit</span><span class="o">.</span><span class="n">is_merged_with_unit</span><span class="p">(</span><span class="n">some_other_unit_uuid</span><span class="p">)</span> <span class="o">//</span> <span class="n">returns</span> <span class="bp">True</span> <span class="k">if</span> <span class="n">a</span> <span class="n">unit</span> <span class="k">with</span> <span class="n">UUID</span> <span class="n">some_other_unit_uuid</span> <span class="n">merged</span> <span class="n">into</span> <span class="n">this</span> <span class="n">unit</span>
+
+<span class="c1"># You can also check an EnemyUnit&#39;s health and position</span>
+<span class="c1"># The enemies argument in your do_move function contains all living enemy units in order of health points</span>
+<span class="n">weakestEnemy</span> <span class="o">=</span> <span class="n">enemies</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">health</span> <span class="o">=</span> <span class="n">weakestEnemy</span><span class="o">.</span><span class="n">health</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">weakestEnemy</span><span class="o">.</span><span class="n">position</span>
+
+<span class="c1"># You can move friendly units using the world.move(unit, position) method.</span>
+<span class="c1"># For instance, this moves some_friendly_unit one step closer to (10, 10)</span>
+<span class="n">world</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">some_friendly_unit</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Side note: a tuple is used to represent an (x, y) coordinate on the board. The top-left corner is (0, 0). X-coordinates increase rightwards per tile. Y-coordinates increase downwards per tile.</span>
+
+<span class="c1"># world.move(unit, position) doesn&#39;t take into account other units or nests when deciding the shortest path</span>
+<span class="c1"># from the unit&#39;s position to the target. It simply looks up walls and tiles from a cache.</span>
+<span class="c1"># You can use world.get_shortest_path(start, end, avoid) to include &quot;avoid&quot; points in your path-finding.</span>
+<span class="n">enemy_positions</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">unit</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+        <span class="n">enemy_positions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
+<span class="c1"># This finds the shortest path between some_friendly_unit&#39;s position and (10, 10) that doesn&#39;t include enemy unit positions</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_shortest_path</span><span class="p">(</span><span class="n">some_friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">enemy_positions</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">path</span><span class="p">:</span> <span class="n">world</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">some_friendly_unit</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="path-finding">
+<h2>Path-finding<a class="headerlink" href="#path-finding" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># The API provides some path-finding methods that you can use</span>
+
+<span class="c1"># ... for finding units</span>
+<span class="n">bad_unit</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_enemy_from</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="c1"># returns the closest EnemyUnit from friendly_unit&#39;s position, or None if there is none</span>
+<span class="n">avoid</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">avoid</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">friendly_unit</span><span class="p">)</span>
+<span class="n">nice_unit</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_friendly_from</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">avoid</span><span class="p">)</span> <span class="c1"># returns the closest FriendlyUnit from friendly_unit, except friendly_unit</span>
+
+<span class="c1"># ... for finding tiles</span>
+<span class="c1"># A Tile represents a colour-changing tile. You can check its owner with tile.is_friendly(), tile.is_enemy() and tile.is_neutral() and its state with tile.is_permanently_owned()</span>
+<span class="n">tile</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_capturable_tile_from</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="c1"># returns closest non-permanent enemy or neutral Tile from friendly_unit&#39;s position, or None if there is none</span>
+<span class="n">all_permanent_enemy_tile_positions</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">tile</span><span class="o">.</span><span class="n">position</span> <span class="k">for</span> <span class="n">tile</span> <span class="ow">in</span> <span class="n">world</span><span class="o">.</span><span class="n">get_enemy_tiles</span><span class="p">()</span> <span class="k">if</span> <span class="n">tile</span><span class="o">.</span><span class="n">is_permanently_owned</span><span class="p">()])</span>
+<span class="n">tile</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_capturable_tile_from</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">all_permanent_enemy_tile_positions</span><span class="p">)</span> <span class="c1"># returns closest non-permanent enemy or neutral Tile from friendly_unit&#39;s position excluding ones whose positions are in all_permanent_enemy_tile_positions, or None if there is none</span>
+
+<span class="c1"># ... for finding nests</span>
+<span class="n">enemy_nest</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_enemy_nest_from</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+<span class="c1"># ... for calculating shortest path</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_shortest_path</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">bad_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">all_nest_and_wall_positions</span><span class="p">)</span> <span class="c1"># returns shortest path between friendly_unit&#39;s position and bad_unit&#39;s position that doesn&#39;t include any points in all_nest_and_wall_positions, or None if there is None</span>
+
+<span class="c1"># Warning: world.get_shortest_path may come at a cost of performance, especially for Python users. To account for performance, you might try something like</span>
+<span class="n">target</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">friendly_unit</span><span class="o">.</span><span class="n">last_move_result</span> <span class="ow">in</span> <span class="p">[</span><span class="n">MoveResult</span><span class="o">.</span><span class="n">BLOCKED_BY_NEST</span><span class="p">,</span> <span class="n">MoveResult</span><span class="o">.</span><span class="n">BLOCKED_BY_WALL</span><span class="p">]:</span>
+        <span class="c1"># use world.get_shortest_path only if you&#39;ve actually hit a wall or a nest</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_shortest_path</span><span class="p">(</span><span class="n">friendly_unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">some_avoid_points</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">path</span><span class="p">:</span> <span class="n">target</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">world</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">friendly_unit</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+<span class="c1"># There is also a more general path-finding function that takes in a custom predicate as an argument</span>
+<span class="c1"># For example, this finds the closest EnemyUnit by FriendlyUnit unit whose health is lower than unit</span>
+<span class="n">weak_enemy_positions</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">enemy</span><span class="o">.</span><span class="n">position</span> <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span> <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">health</span> <span class="o">&lt;</span> <span class="n">unit</span><span class="o">.</span><span class="n">health</span><span class="p">])</span> <span class="c1"># where enemies is the list of EnemyUnits given in the do_move function</span>
+<span class="n">closest_weak_enemy_position</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_closest_point_from</span><span class="p">(</span><span class="n">unit</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">point</span><span class="p">:</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">weak_enemy_positions</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nest-tactics">
+<h2>Nest tactics<a class="headerlink" href="#nest-tactics" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Find neutral tiles</span>
+<span class="n">neutral_tiles</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_neutral_tiles</span><span class="p">()</span>
+<span class="c1"># Find just tiles around a point</span>
+<span class="n">tiles_around</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_tiles_around</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Note: Direction indicates the compass directions and has five types: Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST and Direction.NOWHERE</span>
+
+<span class="c1"># Find enemy nest positions</span>
+<span class="n">enemy_nest_positions</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_enemy_nest_positions</span><span class="p">()</span>
+<span class="c1"># Find enemy nest clusters</span>
+<span class="n">enemy_nest_clusters</span> <span class="o">=</span> <span class="n">world</span><span class="o">.</span><span class="n">get_enemy_nest_clusters</span><span class="p">()</span> <span class="c1"># each set in the list is an enemy nest cluster</span>
+</pre></div>
+</div>
+<p>Feel free to explore the rest of the API in the docstrings!</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PythonClientAPI.Game.html" class="btn btn-neutral float-right" title="PythonClientAPI.Game package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="javaapi.html" class="btn btn-neutral" title="Java API Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Orbis Access.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/video.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

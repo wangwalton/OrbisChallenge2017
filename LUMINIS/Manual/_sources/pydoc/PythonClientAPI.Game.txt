@@ -1,0 +1,31 @@
+PythonClientAPI.Game package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PythonClientAPI.Game.Entities module
+-----------------------------------------
+
+.. automodule:: PythonClientAPI.Game.Entities
+    :members: Tile, FriendlyUnit, EnemyUnit
+
+PythonClientAPI.Game.Enums module
+--------------------------------------
+
+.. automodule:: PythonClientAPI.Game.Enums
+    :members: Direction, TileType, MoveType, MoveResult
+    :undoc-members:
+    :show-inheritance:
+
+PythonClientAPI.Game.PointUtils module
+-------------------------------------------
+
+.. automodule:: PythonClientAPI.Game.PointUtils
+    :members: add_points, sub_points, mod_point
+
+PythonClientAPI.Game.World module
+--------------------------------------
+
+.. automodule:: PythonClientAPI.Game.World
+    
+    .. autoclass:: World
+        :members:
+        :undoc-members:
