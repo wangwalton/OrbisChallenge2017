@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="830431e9-5e53-4c6c-907e-53ef3aa24e6c" name="Default" comment="Second Commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TIle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UnitAI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/JavaAI/PlayerAI.class" afterPath="$PROJECT_DIR$/LUMINIS/Bots/JavaAI/PlayerAI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PyCharm.iml" afterPath="$PROJECT_DIR$/.idea/PyCharm.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/JavaAI/PlayerAI.java" afterPath="$PROJECT_DIR$/LUMINIS/Bots/JavaAI/PlayerAI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PlayerAI.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PlayerAI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/AIHandlerThread.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/AIHandlerThread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/ClientChannelHandler.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/ClientChannelHandler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/ClientHandlerProtocol.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/ClientHandlerProtocol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/CommunicatorConstants.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/CommunicatorConstants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/Flag.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/Flag.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/Signals.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Communication/Signals.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Configurator/Constants.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Configurator/Constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/DataStructures/Collections.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/DataStructures/Collections.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/Entities.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/Entities.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/Enums.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/Enums.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/GameState.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/GameState.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/JSON.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/JSON.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/PlayerAPI.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/PlayerAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/PointUtils.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/PointUtils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/World.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Game/World.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Navigation/NavigationCache.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Navigation/NavigationCache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Test/PlayerAPITest.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/PythonClientAPI/Test/PlayerAPITest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/RunPythonClient.py" afterPath="$PROJECT_DIR$/LUMINIS/Bots/PythonAI/RunPythonClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Launcher.bat" afterPath="$PROJECT_DIR$/LUMINIS/Launcher.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/AIHandlerThread.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/AIHandlerThread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/ClientChannelHandler.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/ClientChannelHandler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/ClientHandlerProtocol.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/ClientHandlerProtocol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/CommunicatorConstants.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/CommunicatorConstants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/Flag.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/Flag.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/Signals.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Communication/Signals.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Configurator/Constants.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Configurator/Constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/DataStructures/Collections.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/DataStructures/Collections.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/Entities.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/Entities.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/Enums.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/Enums.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/GameState.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/GameState.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/JSON.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/JSON.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/PlayerAPI.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/PlayerAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/PointUtils.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/PointUtils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/World.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Game/World.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Navigation/NavigationCache.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Navigation/NavigationCache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Test/PlayerAPITest.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/PythonClientAPI/Test/PlayerAPITest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/RunPythonClient.py" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/RunPythonClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Libraries/compile.bat" afterPath="$PROJECT_DIR$/LUMINIS/Libraries/compile.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Logs/server.out.log" afterPath="$PROJECT_DIR$/LUMINIS/Logs/server.out.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/.buildinfo" afterPath="$PROJECT_DIR$/LUMINIS/Manual/.buildinfo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/PythonClientAPI.Game.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/PythonClientAPI.Game.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/challenge.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/challenge.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/commands.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/commands.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/custom_maps.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/custom_maps.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/faq.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/faq.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/game.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/game.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/ide.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/ide.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/index.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/index.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/installing.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/installing.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/javaapi.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/javaapi.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/pydoc/PythonClientAPI.Game.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/pydoc/PythonClientAPI.Game.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/pythonapi.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/pythonapi.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_sources/quick.txt" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_sources/quick.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/custom-styles.css" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/custom-styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/EnemyUnit.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/EnemyUnit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/FriendlyUnit.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/FriendlyUnit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/Tile.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/Tile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/Unit.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/Unit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/World.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/World.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-summary.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-tree.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/client/objects/models/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/Direction.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/Direction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/MoveResult.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/MoveResult.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/MoveType.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/MoveType.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-summary.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-tree.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/objects/enums/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/PointUtils.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/PointUtils.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-summary.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-tree.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/firefly/utils/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/Point.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/Point.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-summary.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-tree.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/com/orbischallenge/game/engine/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-1.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-10.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-11.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-12.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-13.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-14.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-15.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-2.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-3.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-4.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-5.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-6.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-7.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-8.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-9.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/package-list" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/package-list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/script.js" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/stylesheet.css" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/javadoc/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/pygments.css" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/pygments.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Manual/_static/video.js" afterPath="$PROJECT_DIR$/LUMINIS/Manual/_static/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/MatchPresets/_lastconfig.json" afterPath="$PROJECT_DIR$/LUMINIS/MatchPresets/_lastconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/README.txt" afterPath="$PROJECT_DIR$/LUMINIS/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayerAI.py" afterPath="$PROJECT_DIR$/src/PlayerAI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/AIHandlerThread.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/AIHandlerThread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/ClientChannelHandler.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/ClientChannelHandler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/ClientHandlerProtocol.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/ClientHandlerProtocol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/CommunicatorConstants.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/CommunicatorConstants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/Flag.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/Flag.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Communication/Signals.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Communication/Signals.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Configurator/Constants.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Configurator/Constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/DataStructures/Collections.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/DataStructures/Collections.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/Entities.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/Entities.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/GameState.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/GameState.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/JSON.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/JSON.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/PlayerAPI.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/PlayerAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/PointUtils.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/PointUtils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/World.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/World.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Navigation/NavigationCache.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Navigation/NavigationCache.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Test/PlayerAPITest.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Test/PlayerAPITest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RunPythonClient.py" afterPath="$PROJECT_DIR$/src/RunPythonClient.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="PlayerAI.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitAI.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UnitAI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Firefly.py" />
+        <option value="$PROJECT_DIR$/src/PlayerAI.py" />
+        <option value="$PROJECT_DIR$/src/UnitAI.py" />
+        <option value="$PROJECT_DIR$/src/TIle.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="23" />
+    <option name="width" value="1612" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PyCharm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyCharm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyCharm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyCharm" type="462c0819:PsiDirectoryNode" />
+              <item name="LUMINIS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyCharm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyCharm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Player AI as Blue">
+    <configuration name="Player AI as Blue" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LUMINIS" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/RunPythonClient.py" />
+      <option name="PARAMETERS" value="-c _lastconfig -u Blue -cp" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="Player AI as Red" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LUMINIS" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/RunPythonClient.py" />
+      <option name="PARAMETERS" value="-c _lastconfig -u Red -cp" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PyCharm" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.Player AI as Red" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Player AI as Blue" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="830431e9-5e53-4c6c-907e-53ef3aa24e6c" name="Default" comment="" />
+      <created>1499970595125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1499970595125</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1506185249446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506185249446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2701389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32709113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39950064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnitAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fireflies/Libraries/RunPythonClient.py" />
+    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Configurator/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunPythonClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/Entities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/World.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Communication/AIHandlerThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TIle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnitAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
