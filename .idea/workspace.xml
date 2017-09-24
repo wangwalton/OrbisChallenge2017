@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="830431e9-5e53-4c6c-907e-53ef3aa24e6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SmartDirection.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Logs/server.out.log" afterPath="$PROJECT_DIR$/LUMINIS/Logs/server.out.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/MatchPresets/_lastconfig.json" afterPath="$PROJECT_DIR$/LUMINIS/MatchPresets/_lastconfig.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LUMINIS/Results/JavaAI_Blue_Nesting Cores.json" afterPath="$PROJECT_DIR$/LUMINIS/Results/JavaAI_Blue_Nesting Cores.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayerAI.py" afterPath="$PROJECT_DIR$/src/PlayerAI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py" afterPath="$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScoreMap.py" afterPath="$PROJECT_DIR$/src/ScoreMap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UnitAI.py" afterPath="$PROJECT_DIR$/src/UnitAI.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="PlayerAI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="324">
+              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -35,7 +32,7 @@
       <file leaf-file-name="UnitAI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UnitAI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1306">
+            <state relative-caret-position="1470">
               <caret line="98" column="127" lean-forward="false" selection-start-line="98" selection-start-column="127" selection-end-line="98" selection-end-column="127" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -47,20 +44,20 @@
       <file leaf-file-name="PointUtils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/PointUtils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-82">
-              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSON.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/JSON.py">
+      <file leaf-file-name="AttackerUnitAI.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AttackerUnitAI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,7 +66,7 @@
       <file leaf-file-name="AIHandlerThread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Communication/AIHandlerThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="270">
               <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -79,7 +76,7 @@
       <file leaf-file-name="ScoreMap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScoreMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="2895">
               <caret line="193" column="90" lean-forward="false" selection-start-line="193" selection-start-column="90" selection-end-line="193" selection-end-column="90" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -89,22 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Enums.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NavigationCache.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Navigation/NavigationCache.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="600">
               <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -114,7 +99,7 @@
       <file leaf-file-name="World.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/World.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="645">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
@@ -124,7 +109,7 @@
       <file leaf-file-name="PlayerAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/PlayerAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1405">
+            <state relative-caret-position="1410">
               <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
@@ -177,12 +162,12 @@
         <option value="$PROJECT_DIR$/src/PowerfulPlayerAI.py" />
         <option value="$PROJECT_DIR$/src/PythonClientAPI/Game/PlayerAPI.py" />
         <option value="$PROJECT_DIR$/src/PowerfulUnitAI.py" />
-        <option value="$PROJECT_DIR$/src/AttackerUnitAI.py" />
         <option value="$PROJECT_DIR$/src/ScavengerUnitAI.py" />
         <option value="$PROJECT_DIR$/src/SmartDirection.py" />
         <option value="$PROJECT_DIR$/src/ScoreMap.py" />
         <option value="$PROJECT_DIR$/src/PythonClientAPI/Game/Enums.py" />
         <option value="$PROJECT_DIR$/src/UnitAI.py" />
+        <option value="$PROJECT_DIR$/src/AttackerUnitAI.py" />
         <option value="$PROJECT_DIR$/src/PlayerAI.py" />
       </list>
     </option>
@@ -208,8 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +222,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,16 +400,16 @@
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27181688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32647815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32647815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -525,9 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -535,7 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,23 +764,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScavengerUnitAI.py" />
-    <entry file="file://$PROJECT_DIR$/src/AttackerUnitAI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RunPythonClient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,17 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/GameState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,9 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,15 +789,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Navigation/NavigationCache.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="600">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
@@ -851,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Communication/AIHandlerThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="270">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
@@ -859,7 +810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScoreMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="2895">
           <caret line="193" column="90" lean-forward="false" selection-start-line="193" selection-start-column="90" selection-end-line="193" selection-end-column="90" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -870,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/World.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="645">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
@@ -878,15 +829,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/PointUtils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-82">
-          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="120">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/PlayerAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1405">
+        <state relative-caret-position="1410">
           <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
@@ -896,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UnitAI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1306">
+        <state relative-caret-position="1470">
           <caret line="98" column="127" lean-forward="false" selection-start-line="98" selection-start-column="127" selection-end-line="98" selection-end-column="127" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -904,10 +855,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AttackerUnitAI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PythonClientAPI/Game/GameState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayerAI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="324">
+          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

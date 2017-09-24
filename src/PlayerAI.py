@@ -6,7 +6,7 @@ from UnitAI import UnitAI
 from AttackerUnitAI import AttackerUnitAI
 from ScoreMap import ScoreMap
 import random
-
+import time
 powerfulUnitThreshold = 3
 
 class PlayerAI:
@@ -27,6 +27,7 @@ class PlayerAI:
         :param friendly_units: list of FriendlyUnit objects
         :param enemy_units: list of EnemyUnit objects
         """
+        start = time.time()
 
         # Update the world
         self.ScoreMap = ScoreMap(world, friendly_units, enemy_units)
@@ -43,5 +44,9 @@ class PlayerAI:
 
         for unitAI in self.friendlyAI:
             unitAI.do_move()
+            end = time.time()
+            print(end - start)
+            if(end - start) > 0.595:
+                return
 
 
