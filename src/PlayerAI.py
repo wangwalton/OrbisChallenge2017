@@ -45,7 +45,6 @@ class PlayerAI:
         for unitAI in self.friendlyAI:
             unitAI.do_move()
             end = time.time()
-            print(end - start)
             if(end - start) > 0.595:
                 return
 

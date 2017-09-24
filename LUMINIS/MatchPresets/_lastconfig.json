@@ -1,1 +1,1 @@
-{"mapName":"Nesting Cores","playerPaths":["Bots/JavaAI/PlayerAI.java",""],"maxResponseTime":116,"turnLimit":106,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","IDE"]}
+{"mapName":"Nesting Cores","playerPaths":["Bots/JavaAI/PlayerAI.java",""],"maxResponseTime":601,"turnLimit":106,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","IDE"]}
