@@ -2,13 +2,12 @@ from PythonClientAPI.Game import PointUtils
 from PythonClientAPI.Game.Entities import FriendlyUnit, EnemyUnit, Tile
 from PythonClientAPI.Game.Enums import Direction, MoveType, MoveResult
 from PythonClientAPI.Game.World import World
-import numpy as np
 from UnitAI import UnitAI
 from AttackerUnitAI import AttackerUnitAI
 from ScoreMap import ScoreMap
 import random
 
-powerfulUnitThreshold = 4
+powerfulUnitThreshold = 3
 
 class PlayerAI:
     def __init__(self):

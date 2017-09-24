@@ -6,6 +6,7 @@ from PythonClientAPI.Game.PointUtils import *
 from PythonClientAPI.Game.PlayerAPI import PlayerAPI
 import PythonClientAPI.Game.Enums
 from PythonClientAPI.Game.World import World
+import SmartDirection
 import operator
 import random
 
@@ -29,6 +30,7 @@ class UnitAI:
         self.enemy_units = enemy_units
         self.scoreMap = scoreMap
         self.mapsize = (world.get_width(), world.get_height())
+        self.smartDirection = SmartDirection
         pass
 
     def do_move(self):
@@ -37,8 +39,8 @@ class UnitAI:
 
         nextTiles = self.world.get_tiles_around(self.unit.position);
         for dir in nextTiles:
-
-            newTile = nextTiles[dir];
+            nextpos = mod_point(dir.move_point(self.unit.position), (19,19))
+            newTile = self.world.get_tile_at(nextpos)
             index = Direction.DIRECTION_TO_INDEX[dir]
             points[index] = 0
 
@@ -94,8 +96,9 @@ class UnitAI:
         maxdirchosen = random.randint(0, len(maxdirList)-1)
 
 
-        newPosition = Direction.INDEX_TO_DIRECTION[maxdirList[maxdirchosen]].move_point(self.unit.position)
+        newPosition = mod_point(Direction.INDEX_TO_DIRECTION[maxdirList[maxdirchosen]].move_point(self.unit.position), (19,19))
         self.world.move(self.unit, newPosition)
+
 
         # path = self.world.get_shortest_path(self.unit.position,
         #                                     self.world.get_closest_capturable_tile_from(self.unit.position, None).position,

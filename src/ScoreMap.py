@@ -3,6 +3,7 @@ from PythonClientAPI.Game.Entities import Unit
 from PythonClientAPI.Game.Entities import FriendlyUnit, EnemyUnit, Tile
 from PythonClientAPI.Game.Enums import Direction, MoveType, MoveResult
 import PythonClientAPI.Game.Enums
+from PythonClientAPI.Game.PointUtils import *
 from PythonClientAPI.Game.World import World
 import operator
 
@@ -175,25 +176,25 @@ class ScoreMap:
                 orig_temp = self.position_values[pos]
                 self.new_value[pos] = 0.5 * self.position_values[pos];
 
-                if (self.world.is_wall(Direction.NORTH.move_point(pos))):
+                if (self.world.is_wall(mod_point(Direction.NORTH.move_point(pos), (19,19)))):
                     self.new_value[pos] += 0.125 * orig_temp
                 else:
-                    self.new_value[pos] += 0.125 * self.position_values[Direction.NORTH.move_point(pos)]
+                    self.new_value[pos] += 0.125 * self.position_values[mod_point(Direction.NORTH.move_point(pos), (19,19))]
 
-                if (self.world.is_wall(Direction.SOUTH.move_point(pos))):
+                if (self.world.is_wall(mod_point(Direction.SOUTH.move_point(pos), (19,19)))):
                     self.new_value[pos] += 0.125 * orig_temp
                 else:
-                    self.new_value[pos] += 0.125 * self.position_values[Direction.SOUTH.move_point(pos)]
+                    self.new_value[pos] += 0.125 * self.position_values[mod_point(Direction.SOUTH.move_point(pos), (19,19))]
 
-                if (self.world.is_wall(Direction.EAST.move_point(pos))):
+                if (self.world.is_wall(mod_point(Direction.EAST.move_point(pos), (19,19)))):
                     self.new_value[pos] += 0.125 * orig_temp
                 else:
-                    self.new_value[pos] += 0.125 * self.position_values[Direction.EAST.move_point(pos)]
+                    self.new_value[pos] += 0.125 * self.position_values[mod_point(Direction.EAST.move_point(pos), (19,19))]
 
-                if (self.world.is_wall(Direction.WEST.move_point(pos))):
+                if (self.world.is_wall(mod_point(Direction.WEST.move_point(pos), (19,19)))):
                     self.new_value[pos] += 0.125 * orig_temp
                 else:
-                    self.new_value[pos] += 0.125 * self.position_values[Direction.WEST.move_point(pos)]
+                    self.new_value[pos] += 0.125 * self.position_values[mod_point(Direction.WEST.move_point(pos), (19,19))]
 
             for pos in self.position_values:
                 self.position_values[pos] = self.new_value[pos]
