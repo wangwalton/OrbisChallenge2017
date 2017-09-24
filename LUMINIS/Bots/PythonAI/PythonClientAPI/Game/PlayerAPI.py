@@ -46,7 +46,7 @@ class PlayerAPI:
 
     # A* path-finding
     def get_shortest_path(self, start, end, avoid):
-        if start == end: return [end]
+        if start == end: return end
         if self.is_wall(start) or self.is_wall(end): return None
 
         queue = PriorityQueue()
@@ -173,7 +173,7 @@ class PlayerAPI:
 
     def get_nest_positions(self):
         nests = [team_nests for team_nests in self.team_to_nests_map.values()]
-        return recursively_flatten_list(nests)
+        return recursively_flatten_list(nests, [])
 
     def get_friendly_nest_positions(self):
         return self.team_to_nests_map[Team.FRIENDLY]
@@ -283,7 +283,7 @@ class PlayerAPI:
 
     def get_tiles(self):
         tiles = [t for t in self.team_to_tiles_map.values()]
-        return recursively_flatten_list(tiles)
+        return recursively_flatten_list(tiles, [])
 
     def get_tile_at(self, point):
         if not self._position_to_tile_cache: self._create_position_to_tile_cache()

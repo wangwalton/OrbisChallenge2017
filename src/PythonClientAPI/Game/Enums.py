@@ -4,7 +4,6 @@ from enum import Enum
 
 from PythonClientAPI.Game.PointUtils import *
 
-
 class Direction(Enum):
     """
     Represents cardinal directions that units can move in.
@@ -23,7 +22,8 @@ class Direction(Enum):
         :param (int,int) point: (x,y) point
         :rtype: (int,int)
         """
-        return add_points(point, self.value)
+
+        return mod_point(add_points(point, self.value), (19, 19))
 
 Direction._delta_to_direction = {
     dir.value: dir for dir in Direction
