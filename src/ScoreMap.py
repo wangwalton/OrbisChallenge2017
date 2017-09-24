@@ -198,12 +198,12 @@ class ScoreMap:
             for pos in self.position_values:
                 self.position_values[pos] = self.new_value[pos]
 
-        for j in range(0, 18):
-            for i in range(0, 18):
-                if((i,j) in self.position_values):
-                    print("%.2f" % self.position_values[(i,j)], "         ", end='')
-                else:
-                    print('X             ', end='')
-            print()
+        # for j in range(0, 18):
+        #     for i in range(0, 18):
+        #         if((i,j) in self.position_values):
+        #             print("%.2f" % self.position_values[(i,j)], "         ", end='')
+        #         else:
+        #             print('X             ', end='')
+        #     print()
 
 
